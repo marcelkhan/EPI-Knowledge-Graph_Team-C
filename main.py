@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     # Graph
     graph = Graph()
-    graph.team_name = "Die mutigen Mungos"  # TODO: Geben Sie Ihrem Team einen Namen!
+    graph.team_name = "EPI Team C"  # TODO: Geben Sie Ihrem Team einen Namen!
     graph_content = DemoGraph(graph)  # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten angelegt werden
 
     # beautiful_code_graph = StructuredDemoGraph(graph) # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten strukturiert angelegt werden
