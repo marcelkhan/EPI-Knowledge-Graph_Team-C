@@ -181,3 +181,4 @@ cython_debug/
 .cursorindexingignore
 View/UI/.DS_Store
 .DS_Store
+.idea
