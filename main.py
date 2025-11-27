@@ -20,6 +20,7 @@ import sys
 
 from DemoGraph import DemoGraph
 from Structured_Demo_Knowledge_Graph.StructuredDemoGraph import StructuredDemoGraph
+from Structured_Knowledge_Graph.StructuredKnowledgeGraph import StructuredKnowledgeGraph
 from View.ApplicationLoopManager import ApplicationLoopManager
 from ComponentAssembly.ComponentAssembler import ComponentAssembler
 from GraphModel.Graph import Graph
@@ -38,9 +39,15 @@ if __name__ == '__main__':
 
     # Graph
     graph = Graph()
-    graph.team_name = "EPI Team C"  # TODO: Geben Sie Ihrem Team einen Namen!
-    graph_content = DemoGraph(graph)  # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten angelegt werden
+    graph.team_name = "EPI Team C"
 
+    # Our Knowledge Graph
+    knowledge_graph_content = StructuredKnowledgeGraph(graph)
+    #beautiful_graph = StructuredDemoGraph(graph)
+
+    # Sample Graphs
+    # -------------
+    # graph_content = DemoGraph(graph)  # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten angelegt werden
     # beautiful_code_graph = StructuredDemoGraph(graph) # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten strukturiert angelegt werden
 
     # Application
