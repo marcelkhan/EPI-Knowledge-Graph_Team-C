@@ -28,7 +28,7 @@ class Graph:
     This class serves as the core data structure.
     """
     # Default team name associated with the graph
-    team_name = "Die mutigen Mungos"
+    team_name = "EPI Team C"
     # Initial central position for new nodes
     INITIAL_CENTER_POSITION = 5000000
     MIN_RADIUS = 300
