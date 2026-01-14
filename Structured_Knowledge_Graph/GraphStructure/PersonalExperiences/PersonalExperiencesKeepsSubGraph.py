@@ -3,6 +3,7 @@ from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
+from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import ProjectorientedModulesNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -15,4 +16,10 @@ class PersonalExperiencesKeepsSubGraph:
         self.personal_experiences_keeps_node = NodeIllustration(titel=KeepsNodeData.TITLE,
                                                                 image_name=KeepsNodeData.IMAGE_NAME)
 
+        projectoriented_modules = NodeKnowledge(titel=ProjectorientedModulesNodeData.TITLE,
+                                                description=ProjectorientedModulesNodeData.CONTENT)
+
+        self.personal_experiences_keeps_node.connect(projectoriented_modules)
+
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
+        graph.add_new_node_to_graph(projectoriented_modules)
