@@ -4,7 +4,7 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import ProjectorientedModulesNodeData, \
-    TeamworkNodeData
+    TeamworkNodeData, ModernSoftwareDevelopmentConceptsNodeData, PersonalResponsibilityNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -19,12 +19,24 @@ class PersonalExperiencesKeepsSubGraph:
 
         projectoriented_modules_node = NodeKnowledge(titel=ProjectorientedModulesNodeData.TITLE,
                                                 description=ProjectorientedModulesNodeData.CONTENT)
+
         teamwork_node = NodeKnowledge(titel=TeamworkNodeData.TITLE,
                                       description=TeamworkNodeData.CONTENT)
 
+        modern_software_development_concepts_node = NodeKnowledge(titel=ModernSoftwareDevelopmentConceptsNodeData.TITLE,
+                                                                  description=ModernSoftwareDevelopmentConceptsNodeData.CONTENT)
+
+        personal_responsibility_node = NodeKnowledge(titel=PersonalResponsibilityNodeData.TITLE,
+                                                     description=PersonalResponsibilityNodeData.CONTENT)
+
+
         self.personal_experiences_keeps_node.connect(projectoriented_modules_node)
         self.personal_experiences_keeps_node.connect(teamwork_node)
+        self.personal_experiences_keeps_node.connect(modern_software_development_concepts_node)
+        self.personal_experiences_keeps_node.connect(personal_responsibility_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
         graph.add_new_node_to_graph(projectoriented_modules_node)
         graph.add_new_node_to_graph(teamwork_node)
+        graph.add_new_node_to_graph(modern_software_development_concepts_node)
+        graph.add_new_node_to_graph(personal_responsibility_node)
