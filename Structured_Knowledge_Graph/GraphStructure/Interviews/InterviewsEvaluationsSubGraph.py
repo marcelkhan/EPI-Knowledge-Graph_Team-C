@@ -1,8 +1,10 @@
 # Created by Timon Kirch on 17.01.26.
 from GraphModel.Graph import Graph
+from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews import InterviewsEvaluationsNodeData
-from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import ExpectationsNodeData
+from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import ExpectationsNodeData, \
+    StudyingSatisfactionNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -18,7 +20,12 @@ class InterviewsEvaluationsSubGraph:
         expectations_node = NodeKnowledge(titel=ExpectationsNodeData.TITEL,
                                           description=ExpectationsNodeData.CONTENT)
 
+        studying_satisfaction_node = NodeIllustration(titel=StudyingSatisfactionNodeData.TITEL,
+                                                      image_name=StudyingSatisfactionNodeData.IMAGE_NAME)
+
         self.interviews_evaluations_node.connect(expectations_node)
+        self.interviews_evaluations_node.connect(studying_satisfaction_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
+        graph.add_new_node_to_graph(studying_satisfaction_node)
