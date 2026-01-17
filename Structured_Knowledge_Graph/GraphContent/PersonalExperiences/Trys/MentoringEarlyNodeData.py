@@ -1,0 +1,16 @@
+TITLE = "Fehlende strukturierte Mentoring-Programme"
+
+CONTENT = (" Aus eigener Erfahrung fehlt es im Studiengang an einem systematischen Mentoring-Programm, das Erstis gezielt unterstützt.\n\n "
+           " Ein Try wäre es, digitale Sprechstunden einzuführen, in denen höhere Semester als Mentor:innen fungieren. "
+           " Dies würde nicht nur den Wissensaustausch fördern, sondern auch die Dozent:innen entlasten,"
+           " welche aktuell oft mit grundlegenden Fragen unnötig ausgelastet werden. \n\n"
+           " Besonders vorteilhaft wäre ein solches Programm, weil es Erstis eine schnellere Eingewöhnung ermöglicht. "
+           " Viele Kommiliton:innen, mich eingeschlossen, hatten zu Beginn Schwierigkeiten, sich im Studienalltag zurechtzufinden. "
+           " Bei Fragen mit der Modulwahl, Prüfungsvorbereitung oder Organisation. "
+           " Hier könnten erfahrene Studierende mit praktischen Tipps aus erster Hand helfen, was die Community stärken und den Zusammenhalt fördern würde.\n\n"
+           " In der Mathematik 2 wurde so etwas bereits im Zusammenhang mit wissenschaftlichen Arbeiten und Mentor:innen umgesetzt. "
+           " Das hat für Mathematik 2 damals echt gut funktioniert und könnte meiner Meinung nach allen Erstis zu verfügung gestellt werden. \n\n"
+           " Ein strukturiertes Mentoring-Programm würde dann nicht nur den Erstsemestern den Einstieg erleichtern,"
+           " sondern auch den Dozent:innen Zeit und Nerven sparen, da weniger Grundlegende Fragen an sie herangetragen werden. "
+           " Eine Win-Win-Situation für alle Beteiligten.\n\n"
+           "### Autor: Florian Luzemann\n")

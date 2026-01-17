@@ -1,0 +1,13 @@
+TITLE = "Veraltete Programmiersprachen als Pflichtinhalte"
+CONTENT = (" Aus eigener Erfahrung ist es sehr frustrierend, z.B im Pflichtmodul 'Algorithmen und Programmierung' "
+           " veraltete Programmiersprachen wie C in Vim erlernen zu müssen. \n\n " 
+           " Zwar hat C historische Bedeutung und ist für das Verständnis von Systemprogrammierung wichtig, "
+           " doch der für mich zu tiefe Fokus auf solche veralteten Tools und Arbeitsweisen fühlt sich oft wie eine unnötige Hürde an."
+           " Die meisten Studierenden, mich eingeschlossen, sehen den Praxisbezug nicht, "
+           " da diese Sprachen und Entwicklungsumgebungen im modernen Berufsalltag kaum noch eingesetzt werden."
+           " Besonders problematisch finde ich, dass wertvolle Zeit in Inhalte investiert wird, die später kaum Anwendung finden. "
+           " Stattdessen könnten wir diese Zeit nutzen, um moderne Sprachen wie Rust, Go, Kotlin oder sogar Java zu vertiefen, "
+           " die in der Industrie stark nachgefragt werden. \n\n"
+           " Selbst eine Sprache wie Java, die zwar älter ist, aber immer noch weit verbreitet, wäre meiner meinung nach eine zeitlich sinnvollere Investition. "
+           " Die Beibehaltung veralteter Sprachen führt bei vielen Kommilitonen zu Demotivation, weil der Nutzen für die spätere Berufspraxis unklar bleibt. \n\n"
+           "### Autor: Florian Luzemann\n")
