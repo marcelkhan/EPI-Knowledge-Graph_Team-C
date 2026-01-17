@@ -2,4 +2,4 @@
 
 TITEL = "Evaluation der Befragungen von Mitstudierenden"
 
-CONTENT = ("Hier werden die Knoten mit den Ergebnissen der Evaluation der Befragung der Studierenden gesammelt.")
+CONTENT = "Hier werden die Knoten mit den Ergebnissen der Evaluation der Befragung der Studierenden gesammelt."
