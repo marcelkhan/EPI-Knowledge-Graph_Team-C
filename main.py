@@ -18,8 +18,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 import pygame.freetype
 import sys
 
-from DemoGraph import DemoGraph
-from Structured_Demo_Knowledge_Graph.StructuredDemoGraph import StructuredDemoGraph
 from Structured_Knowledge_Graph.StructuredKnowledgeGraph import StructuredKnowledgeGraph
 from View.ApplicationLoopManager import ApplicationLoopManager
 from ComponentAssembly.ComponentAssembler import ComponentAssembler
