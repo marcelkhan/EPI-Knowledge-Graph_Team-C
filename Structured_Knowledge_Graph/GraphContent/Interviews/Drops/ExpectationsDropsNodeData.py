@@ -18,4 +18,4 @@ CONTENT = ("### Aspekte, die reduziert oder überdacht werden sollten, ergeben s
            "### - Randständige Behandlung einzelner Themenfelder: \n"
            "Insbesondere der Bereich IT-Security wird als zu kurz kommend beschrieben. Eine marginale Behandlung "
            "solcher Themen kann zu Kompetenzlücken führen, die im späteren Berufsleben relevant sind. \n\n"
-           "### Autor: Marcel Khan\n")
+           "### Autor: Marcel Khan \n")
