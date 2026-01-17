@@ -1,10 +1,11 @@
 # Created by Marcel Khan on 27.11.25.
 from GraphModel.Graph import Graph
 from Structured_Knowledge_Graph.GraphStructure.EvaluationSubGraph import EvaluationSubGraph
-from Structured_Knowledge_Graph.GraphStructure.InterviewsDropsSubGraph import InterviewsDropsSubGraph
-from Structured_Knowledge_Graph.GraphStructure.InterviewsKeepsSubGraph import InterviewsKeepsSubGraph
-from Structured_Knowledge_Graph.GraphStructure.InterviewsSubGraph import InterviewsSubGraph
-from Structured_Knowledge_Graph.GraphStructure.InterviewsTrysSubGraph import InterviewsTrysSubGraph
+from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsDropsSubGraph import InterviewsDropsSubGraph
+from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsKeepsSubGraph import InterviewsKeepsSubGraph
+from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsSubGraph import InterviewsSubGraph
+from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsTrysSubGraph import InterviewsTrysSubGraph
+from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsEvaluationsSubGraph import InterviewsEvaluationsSubGraph
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesDropsSubGraph import PersonalExperiencesDropsSubGraph
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesKeepsSubGraph import PersonalExperiencesKeepsSubGraph
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesSubGraph import PersonalExperiencesSubGraph
@@ -22,6 +23,7 @@ class StructuredKnowledgeGraph:
     interviews_keeps_subgraph: InterviewsKeepsSubGraph
     interviews_drops_subgraph: InterviewsDropsSubGraph
     interviews_trys_subgraph: InterviewsTrysSubGraph
+    interviews_evaluations_subgraph: InterviewsEvaluationsSubGraph
 
     def __init__(self, graph: Graph):
         self.assemble_graph(graph)
@@ -37,6 +39,7 @@ class StructuredKnowledgeGraph:
         self.interviews_keeps_subgraph = InterviewsKeepsSubGraph(graph)
         self.interviews_drops_subgraph = InterviewsDropsSubGraph(graph)
         self.interviews_trys_subgraph = InterviewsTrysSubGraph(graph)
+        self.interviews_evaluations_subgraph = InterviewsEvaluationsSubGraph(graph)
 
     def connect_sub_graphs(self):
         # evaluation
@@ -67,4 +70,7 @@ class StructuredKnowledgeGraph:
         )
         self.interviews_subgraph.interviews_node.connect(
             self.interviews_trys_subgraph.interviews_trys_node
+        )
+        self.interviews_subgraph.interviews_node.connect(
+            self.interviews_evaluations_subgraph.interviews_evaluations_node
         )
