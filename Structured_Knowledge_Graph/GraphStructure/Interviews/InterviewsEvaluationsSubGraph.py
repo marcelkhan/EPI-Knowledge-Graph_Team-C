@@ -4,7 +4,8 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews import InterviewsEvaluationsNodeData
 from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import ExpectationsNodeData, \
-    StudyingSatisfactionNodeData, ExamRequirementsNodeData, TheoreticalAndPracticalAspectsNodeData
+    StudyingSatisfactionNodeData, ExamRequirementsNodeData, TheoreticalAndPracticalAspectsNodeData, \
+    StudyingSatisfactionResultsNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -29,13 +30,18 @@ class InterviewsEvaluationsSubGraph:
         theoretical_and_practical_aspects_node = NodeIllustration(titel=TheoreticalAndPracticalAspectsNodeData.TITEL,
                                                                   image_name=TheoreticalAndPracticalAspectsNodeData.IMAGE_NAME)
 
+        studying_satisfaction_results_node = NodeKnowledge(titel=StudyingSatisfactionResultsNodeData.TITEL,
+                                                           description=StudyingSatisfactionResultsNodeData.CONTENT)
+
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
         self.interviews_evaluations_node.connect(exam_requirements_node)
         self.interviews_evaluations_node.connect(theoretical_and_practical_aspects_node)
+        self.interviews_evaluations_node.connect(studying_satisfaction_results_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
         graph.add_new_node_to_graph(studying_satisfaction_node)
         graph.add_new_node_to_graph(exam_requirements_node)
         graph.add_new_node_to_graph(theoretical_and_practical_aspects_node)
+        graph.add_new_node_to_graph(studying_satisfaction_results_node)
