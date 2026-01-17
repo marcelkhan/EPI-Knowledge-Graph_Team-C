@@ -41,12 +41,6 @@ if __name__ == '__main__':
 
     # Our Knowledge Graph
     knowledge_graph_content = StructuredKnowledgeGraph(graph)
-    #beautiful_graph = StructuredDemoGraph(graph)
-
-    # Sample Graphs
-    # -------------
-    # graph_content = DemoGraph(graph)  # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten angelegt werden
-    # beautiful_code_graph = StructuredDemoGraph(graph) # TODO: Hier können Sie sehen wie die Inhalte und Verbindungen von Knoten strukturiert angelegt werden
 
     # Application
     component_assembler = ComponentAssembler(graph, screen, window_width, window_height)
