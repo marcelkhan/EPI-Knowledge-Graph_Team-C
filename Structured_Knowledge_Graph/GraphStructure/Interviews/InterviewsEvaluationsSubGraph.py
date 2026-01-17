@@ -8,7 +8,9 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     StudyingSatisfactionResultsNodeData, ExamRequirementsResultsNodeData, TheoreticalAndPracticalAspectsResultsNodeData, \
     LearningMethodsNodeData, LearningMethodsResultsNodeData, ExamTypeDislikesResultsNoteData, ExamTypeDislikesNodeData, \
     AgedExamTypesNodeData, AmountOfTopicsNodeData, AmountOfTopicsResultsNodeData, QualityOfTopicsNodeData, \
-    QualityOfTopicsResultsNodeData, IncreaseOfLectureTypeResultsNodeData, IncreaseOfLectureTypeNodeData
+    QualityOfTopicsResultsNodeData, IncreaseOfLectureTypeResultsNodeData, IncreaseOfLectureTypeNodeData, \
+    WorkingInTeamsNodeData, SatisfactionWithStudyingNodeData, OrganisationNodeData, OrganisationResultsNodeData, \
+    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -48,6 +50,15 @@ class InterviewsEvaluationsSubGraph:
         increase_of_lecture_type_node = NodeIllustration(titel=IncreaseOfLectureTypeNodeData.TITEL,
                                                          image_name=IncreaseOfLectureTypeNodeData.IMAGE_NAME)
 
+        organisation_node = NodeIllustration(titel=OrganisationNodeData.TITEL,
+                                             image_name=OrganisationNodeData.IMAGE_NAME)
+
+        satisfaction_with_studying_node = NodeIllustration(titel=SatisfactionWithStudyingNodeData.TITEL,
+                                                           image_name=SatisfactionWithStudyingNodeData.IMAGE_NAME)
+
+        working_in_teams_node = NodeIllustration(titel=WorkingInTeamsNodeData.TITEL,
+                                                 image_name=WorkingInTeamsNodeData.IMAGE_NAME)
+
         studying_satisfaction_results_node = NodeKnowledge(titel=StudyingSatisfactionResultsNodeData.TITEL,
                                                            description=StudyingSatisfactionResultsNodeData.CONTENT)
 
@@ -75,6 +86,18 @@ class InterviewsEvaluationsSubGraph:
         increase_of_lecture_type_results_node = NodeKnowledge(titel=IncreaseOfLectureTypeResultsNodeData.TITEL,
                                                               description=IncreaseOfLectureTypeResultsNodeData.CONTENT)
 
+        organisation_results_node = NodeKnowledge(titel=OrganisationResultsNodeData.TITEL,
+                                                  description=OrganisationResultsNodeData.CONTENT)
+
+        recommended_studying_path_results_node = NodeKnowledge(titel=RecommendedStudyingPathResultNodeData.TITEL,
+                                                               description=RecommendedStudyingPathResultNodeData.CONTENT)
+
+        satisfaction_with_studying_results_node = NodeKnowledge(titel=SatisfactionWithStudyingResultsNodeData.TITEL,
+                                                                description=SatisfactionWithStudyingResultsNodeData.CONTENT)
+
+        working_in_teams_results_node = NodeKnowledge(titel=WorkingInTeamsResultsNodeData.TITEL,
+                                                      description=WorkingInTeamsResultsNodeData.CONTENT)
+
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
         self.interviews_evaluations_node.connect(exam_requirements_node)
@@ -93,6 +116,13 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(quality_of_topics_results_node)
         self.interviews_evaluations_node.connect(increase_of_lecture_type_results_node)
         self.interviews_evaluations_node.connect(increase_of_lecture_type_node)
+        self.interviews_evaluations_node.connect(organisation_node)
+        self.interviews_evaluations_node.connect(working_in_teams_node)
+        self.interviews_evaluations_node.connect(satisfaction_with_studying_node)
+        self.interviews_evaluations_node.connect(organisation_results_node)
+        self.interviews_evaluations_node.connect(recommended_studying_path_results_node)
+        self.interviews_evaluations_node.connect(satisfaction_with_studying_results_node)
+        self.interviews_evaluations_node.connect(working_in_teams_results_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -113,3 +143,10 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(quality_of_topics_results_node)
         graph.add_new_node_to_graph(increase_of_lecture_type_results_node)
         graph.add_new_node_to_graph(increase_of_lecture_type_node)
+        graph.add_new_node_to_graph(organisation_node)
+        graph.add_new_node_to_graph(working_in_teams_node)
+        graph.add_new_node_to_graph(satisfaction_with_studying_node)
+        graph.add_new_node_to_graph(organisation_results_node)
+        graph.add_new_node_to_graph(recommended_studying_path_results_node)
+        graph.add_new_node_to_graph(satisfaction_with_studying_results_node)
+        graph.add_new_node_to_graph(working_in_teams_results_node)
