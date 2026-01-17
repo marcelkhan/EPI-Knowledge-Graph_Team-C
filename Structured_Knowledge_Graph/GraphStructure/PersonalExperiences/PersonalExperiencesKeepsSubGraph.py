@@ -8,7 +8,8 @@ from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import ProjectorientedModulesNodeData, \
     TeamworkNodeData, ModernSoftwareDevelopmentConceptsNodeData, PersonalResponsibilityNodeData, AvailabilityNodeData, \
     ClearModuleStructuresNodeData, LectureAndExercisesNodeData, FundamentalConceptsNodeData, CoreSubjectsNodeData, \
-    AcademicResearchNodeData
+    AcademicResearchNodeData, CourseSpotAvailabilityNodeData, DigitalOrganisationNodeData, YearlyStructureNodeData, \
+    PracticalRelevanceNodeData, CreativeCourseDesignNodeData, IntroductoryModulesNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -51,6 +52,24 @@ class PersonalExperiencesKeepsSubGraph:
         academic_research_node = NodeKnowledge(titel=AcademicResearchNodeData.TITLE,
                                                description=AcademicResearchNodeData.CONTENT)
 
+        course_spot_availability_node = NodeKnowledge(titel=CourseSpotAvailabilityNodeData.TITLE,
+                                                      description=CourseSpotAvailabilityNodeData.CONTENT)
+
+        digital_organisation_node = NodeKnowledge(titel=DigitalOrganisationNodeData.TITLE,
+                                                  description=DigitalOrganisationNodeData.CONTENT)
+
+        yearly_structure_node = NodeKnowledge(titel=YearlyStructureNodeData.TITLE,
+                                              description=YearlyStructureNodeData.CONTENT)
+
+        practical_relevance_node = NodeKnowledge(titel=PracticalRelevanceNodeData.TITLE,
+                                                 description=PracticalRelevanceNodeData.CONTENT)
+
+        creative_course_design_node = NodeKnowledge(titel=CreativeCourseDesignNodeData.TITLE,
+                                                    description=CreativeCourseDesignNodeData.CONTENT)
+
+        introductory_modules_node = NodeKnowledge(titel=IntroductoryModulesNodeData.TITLE,
+                                                  description=IntroductoryModulesNodeData.CONTENT)
+
         self.personal_experiences_keeps_node.connect(projectoriented_modules_node)
         self.personal_experiences_keeps_node.connect(teamwork_node)
         self.personal_experiences_keeps_node.connect(modern_software_development_concepts_node)
@@ -61,6 +80,12 @@ class PersonalExperiencesKeepsSubGraph:
         self.personal_experiences_keeps_node.connect(fundamental_concepts_node)
         self.personal_experiences_keeps_node.connect(core_subjects_node)
         self.personal_experiences_keeps_node.connect(academic_research_node)
+        self.personal_experiences_keeps_node.connect(course_spot_availability_node)
+        self.personal_experiences_keeps_node.connect(digital_organisation_node)
+        self.personal_experiences_keeps_node.connect(yearly_structure_node)
+        self.personal_experiences_keeps_node.connect(practical_relevance_node)
+        self.personal_experiences_keeps_node.connect(creative_course_design_node)
+        self.personal_experiences_keeps_node.connect(introductory_modules_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
         graph.add_new_node_to_graph(projectoriented_modules_node)
@@ -73,3 +98,9 @@ class PersonalExperiencesKeepsSubGraph:
         graph.add_new_node_to_graph(fundamental_concepts_node)
         graph.add_new_node_to_graph(core_subjects_node)
         graph.add_new_node_to_graph(academic_research_node)
+        graph.add_new_node_to_graph(course_spot_availability_node)
+        graph.add_new_node_to_graph(digital_organisation_node)
+        graph.add_new_node_to_graph(yearly_structure_node)
+        graph.add_new_node_to_graph(practical_relevance_node)
+        graph.add_new_node_to_graph(creative_course_design_node)
+        graph.add_new_node_to_graph(introductory_modules_node)
