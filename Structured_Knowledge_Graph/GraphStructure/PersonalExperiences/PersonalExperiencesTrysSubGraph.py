@@ -5,7 +5,7 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Trys import PreparationForThesisNodeData, \
     InsecurityNodeData, ComputerScienceInASocialContextNodeData, SupportNodeData, LearningJourneyNodeData, \
-    CourseStructureNodeData, ScientificPapersNodeData
+    CourseStructureNodeData, ScientificPapersNodeData, ExamPeriodNodeData, HybridLectureNodeData, MentoringEarlyNodeData
 
 
 class PersonalExperiencesTrysSubGraph:
@@ -39,6 +39,15 @@ class PersonalExperiencesTrysSubGraph:
         scientific_papers_node = NodeKnowledge(titel=ScientificPapersNodeData.TITLE,
                                                description=ScientificPapersNodeData.CONTENT)
 
+        exam_period_node = NodeKnowledge(titel=ExamPeriodNodeData.TITLE,
+                                         description=ExamPeriodNodeData.CONTENT)
+
+        hybrid_lecture_node=NodeKnowledge(titel=HybridLectureNodeData.TITLE,
+                                          description=HybridLectureNodeData.CONTENT)
+
+        mentoring_early_node=NodeKnowledge(titel=MentoringEarlyNodeData.TITLE,
+                                           description=MentoringEarlyNodeData.CONTENT)
+
         self.personal_experiences_trys_node.connect(preparation_for_thesis_node)
         self.personal_experiences_trys_node.connect(insecurity_node)
         self.personal_experiences_trys_node.connect(computer_science_in_a_social_context_node)
@@ -46,6 +55,9 @@ class PersonalExperiencesTrysSubGraph:
         self.personal_experiences_trys_node.connect(learning_journey_node)
         self.personal_experiences_trys_node.connect(course_structure_node)
         self.personal_experiences_trys_node.connect(scientific_papers_node)
+        self.personal_experiences_trys_node.connect(exam_period_node)
+        self.personal_experiences_trys_node.connect(hybrid_lecture_node)
+        self.personal_experiences_trys_node.connect(mentoring_early_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_trys_node)
         graph.add_new_node_to_graph(preparation_for_thesis_node)
@@ -55,3 +67,6 @@ class PersonalExperiencesTrysSubGraph:
         graph.add_new_node_to_graph(learning_journey_node)
         graph.add_new_node_to_graph(course_structure_node)
         graph.add_new_node_to_graph(scientific_papers_node)
+        graph.add_new_node_to_graph(exam_period_node)
+        graph.add_new_node_to_graph(hybrid_lecture_node)
+        graph.add_new_node_to_graph(mentoring_early_node)
