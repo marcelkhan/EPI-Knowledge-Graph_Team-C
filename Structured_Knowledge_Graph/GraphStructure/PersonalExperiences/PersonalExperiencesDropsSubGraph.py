@@ -4,7 +4,7 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import DropsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Drops import ExamRequirementsNodeData, \
-    RequirementsNodeData
+    RequirementsNodeData, ExamsHigherSemesterNodeData
 
 
 class PersonalExperiencesDropsSubGraph:
@@ -23,9 +23,14 @@ class PersonalExperiencesDropsSubGraph:
         requirements_node = NodeKnowledge(titel=RequirementsNodeData.TITLE,
                                           description=RequirementsNodeData.CONTENT)
 
+        exams_higher_semester_node = NodeKnowledge(titel=ExamsHigherSemesterNodeData.TITLE,
+                                                   description=ExamsHigherSemesterNodeData.CONTENT)
+
         self.personal_experiences_drops_node.connect(exam_requirements_node)
         self.personal_experiences_drops_node.connect(requirements_node)
+        self.personal_experiences_drops_node.connect(exams_higher_semester_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_drops_node)
         graph.add_new_node_to_graph(exam_requirements_node)
         graph.add_new_node_to_graph(requirements_node)
+        graph.add_new_node_to_graph(exams_higher_semester_node)
