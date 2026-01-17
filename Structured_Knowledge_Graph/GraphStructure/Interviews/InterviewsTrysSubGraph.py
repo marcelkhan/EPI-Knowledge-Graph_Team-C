@@ -2,7 +2,7 @@
 from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
-from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData
+from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, WorkingInTeamsTrysNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 
 
@@ -19,7 +19,12 @@ class InterviewsTrysSubGraph:
         expectations_trys_node = NodeKnowledge(titel=ExpectationsTrysNodeData.TITEL,
                                                description=ExpectationsTrysNodeData.CONTENT)
 
+        working_in_teams_trys_node = NodeKnowledge(titel=WorkingInTeamsTrysNodeData.TITEL,
+                                                  description=WorkingInTeamsTrysNodeData.CONTENT)
+
         self.interviews_trys_node.connect(expectations_trys_node)
+        self.interviews_trys_node.connect(working_in_teams_trys_node)
 
         graph.add_new_node_to_graph(self.interviews_trys_node)
         graph.add_new_node_to_graph(expectations_trys_node)
+        graph.add_new_node_to_graph(working_in_teams_trys_node)

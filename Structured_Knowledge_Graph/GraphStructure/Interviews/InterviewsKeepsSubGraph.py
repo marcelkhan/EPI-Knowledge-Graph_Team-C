@@ -3,7 +3,7 @@ from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Keeps import ExpectationsKeepsNodeData, \
-    StudyingSatisfactionKeepsNodeData
+    StudyingSatisfactionKeepsNodeData, SatisfactionWithStudyingKeepsNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 
 
@@ -23,9 +23,14 @@ class InterviewsKeepsSubGraph:
         studying_satisfaction_keeps_node = NodeKnowledge(titel=StudyingSatisfactionKeepsNodeData.TITEL,
                                                          description=StudyingSatisfactionKeepsNodeData.CONTENT)
 
+        satisfaction_with_studying_keeps_node = NodeKnowledge(titel=SatisfactionWithStudyingKeepsNodeData.TITEL,
+                                                              description=SatisfactionWithStudyingKeepsNodeData.CONTENT)
+
         self.interviews_keeps_node.connect(expectations_keeps_node)
         self.interviews_keeps_node.connect(studying_satisfaction_keeps_node)
+        self.interviews_keeps_node.connect(satisfaction_with_studying_keeps_node)
 
         graph.add_new_node_to_graph(self.interviews_keeps_node)
         graph.add_new_node_to_graph(expectations_keeps_node)
         graph.add_new_node_to_graph(studying_satisfaction_keeps_node)
+        graph.add_new_node_to_graph(satisfaction_with_studying_keeps_node)
