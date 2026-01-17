@@ -5,7 +5,8 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews import InterviewsEvaluationsNodeData
 from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import ExpectationsNodeData, \
     StudyingSatisfactionNodeData, ExamRequirementsNodeData, TheoreticalAndPracticalAspectsNodeData, \
-    StudyingSatisfactionResultsNodeData, ExamRequirementsResultsNodeData, TheoreticalAndPracticalAspectsResultsNodeData
+    StudyingSatisfactionResultsNodeData, ExamRequirementsResultsNodeData, TheoreticalAndPracticalAspectsResultsNodeData, \
+    LearningMethodsNodeData, LearningMethodsResultsNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -30,6 +31,9 @@ class InterviewsEvaluationsSubGraph:
         theoretical_and_practical_aspects_node = NodeIllustration(titel=TheoreticalAndPracticalAspectsNodeData.TITEL,
                                                                   image_name=TheoreticalAndPracticalAspectsNodeData.IMAGE_NAME)
 
+        learning_methods_node = NodeIllustration(titel=LearningMethodsNodeData.TITEL,
+                                                 image_name=LearningMethodsNodeData.IMAGE_NAME)
+
         studying_satisfaction_results_node = NodeKnowledge(titel=StudyingSatisfactionResultsNodeData.TITEL,
                                                            description=StudyingSatisfactionResultsNodeData.CONTENT)
 
@@ -39,6 +43,9 @@ class InterviewsEvaluationsSubGraph:
         theoretical_and_practical_aspects_results_node = NodeKnowledge(titel=TheoreticalAndPracticalAspectsResultsNodeData.TITEL,
                                                                        description=TheoreticalAndPracticalAspectsResultsNodeData.CONTENT)
 
+        learning_methods_results_node =NodeKnowledge(titel=LearningMethodsResultsNodeData.TITEL,
+                                                     description=LearningMethodsResultsNodeData.CONTENT)
+
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
         self.interviews_evaluations_node.connect(exam_requirements_node)
@@ -46,6 +53,8 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(studying_satisfaction_results_node)
         self.interviews_evaluations_node.connect(exam_requirements_results_node)
         self.interviews_evaluations_node.connect(theoretical_and_practical_aspects_results_node)
+        self.interviews_evaluations_node.connect(learning_methods_results_node)
+        self.interviews_evaluations_node.connect(learning_methods_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -55,3 +64,5 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(studying_satisfaction_results_node)
         graph.add_new_node_to_graph(exam_requirements_results_node)
         graph.add_new_node_to_graph(theoretical_and_practical_aspects_results_node)
+        graph.add_new_node_to_graph(learning_methods_results_node)
+        graph.add_new_node_to_graph(learning_methods_node)
