@@ -3,7 +3,7 @@ from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Drops import ExpectationsDropsNodeData, \
-    HandwrittenCodingExamsNodeData
+    HandwrittenCodingExamsNodeData, BWLNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import DropsNodeData
 
 
@@ -23,9 +23,14 @@ class InterviewsDropsSubGraph:
         handwritten_coding_exams = NodeKnowledge(titel=HandwrittenCodingExamsNodeData.TITLE,
                                                  description=HandwrittenCodingExamsNodeData.CONTENT)
 
-        self.interviews_drops_node.connect(expectations_drops_node)#
+        bwl_node = NodeKnowledge(titel=BWLNodeData.TITLE,
+                                 description=BWLNodeData.CONTENT)
+
+        self.interviews_drops_node.connect(expectations_drops_node)
         self.interviews_drops_node.connect(handwritten_coding_exams)
+        self.interviews_drops_node.connect(bwl_node)
 
         graph.add_new_node_to_graph(self.interviews_drops_node)
         graph.add_new_node_to_graph(expectations_drops_node)
         graph.add_new_node_to_graph(handwritten_coding_exams)
+        graph.add_new_node_to_graph(bwl_node)

@@ -1,0 +1,11 @@
+TITLE= "Chatgpt nutzen zum Erstellen von Loesungswegen"
+CONTENT= ("ChatGPT kann zwar dazu genutzt werden, Aufgaben komplett zu loesen,\n"
+              " doch ein viel nachhaltigerer Nutzen liegt darin, sich Aufgaben Schritt fuer Schritt erklaeren zu lassen.\n"
+              " Dies habe ich bereits erfolgreich bei einer Mathematikaufgabe ausprobiert: Anstatt die Loesung direkt abzufragen,\n"
+              " habe ich ein Foto der Aufgabe hochgeladen und den Prompt genutzt, mir lediglich den Rechenweg und\n"
+              " die zugrunde liegenden Prinzipien zu erlaeutern, ohne das Endergebnis vorwegzunehmen.\n"
+              "Daraufhin erstellt die KI eine strukturierte Liste mit Erklaerungen, die aufzeigt, was getan werden muss und warum bestimmte Schritte notwendig sind.\n"
+              " Sobald man die Aufgabe dann eigenstaendig geloest hat, kann man sein eigenes Ergebnis von ChatGPT ueberpruefen lassen.\n"
+              " Dieser Prozess eignet sich hervorragend zur Selbstkontrolle, da man so direkt vergleichen kann,\n"
+              " ob man selbst einen Fehler gemacht hat oder ob die KI bei der Berechnung eventuell falsch liegt.\n"
+              "###Autor: Daniel Hans Gabor")

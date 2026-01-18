@@ -10,7 +10,9 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     AgedExamTypesNodeData, AmountOfTopicsNodeData, AmountOfTopicsResultsNodeData, QualityOfTopicsNodeData, \
     QualityOfTopicsResultsNodeData, IncreaseOfLectureTypeResultsNodeData, IncreaseOfLectureTypeNodeData, \
     WorkingInTeamsNodeData, SatisfactionWithStudyingNodeData, OrganisationNodeData, OrganisationResultsNodeData, \
-    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData
+    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData, \
+    TopicsKnowMoreNodeData, ModulesNotPracticalNodeData, MostLikedModulesNodeData, OldIrrelevantModulesNodeData, \
+    TopicsMostValuableNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -59,6 +61,9 @@ class InterviewsEvaluationsSubGraph:
         working_in_teams_node = NodeIllustration(titel=WorkingInTeamsNodeData.TITEL,
                                                  image_name=WorkingInTeamsNodeData.IMAGE_NAME)
 
+        topics_know_more_node = NodeIllustration(titel=TopicsKnowMoreNodeData.TITEL,
+                                                 image_name=TopicsKnowMoreNodeData.IMAGE_NAME)
+
         studying_satisfaction_results_node = NodeKnowledge(titel=StudyingSatisfactionResultsNodeData.TITEL,
                                                            description=StudyingSatisfactionResultsNodeData.CONTENT)
 
@@ -98,6 +103,19 @@ class InterviewsEvaluationsSubGraph:
         working_in_teams_results_node = NodeKnowledge(titel=WorkingInTeamsResultsNodeData.TITEL,
                                                       description=WorkingInTeamsResultsNodeData.CONTENT)
 
+        modules_not_practical_node = NodeKnowledge(titel=ModulesNotPracticalNodeData.TITEL,
+                                                   description=ModulesNotPracticalNodeData.CONTENT)
+
+        most_liked_modules_node = NodeKnowledge(titel=MostLikedModulesNodeData.TITEL,
+                                                description=MostLikedModulesNodeData.CONTENT)
+
+        old_irrelevant_modules_node = NodeKnowledge(titel=OldIrrelevantModulesNodeData.TITEL,
+                                                    description=OldIrrelevantModulesNodeData.CONTENT)
+
+        topics_most_valuable_node = NodeKnowledge(titel=TopicsMostValuableNodeData.TITEL,
+                                                  description=TopicsMostValuableNodeData.CONTENT)
+
+
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
         self.interviews_evaluations_node.connect(exam_requirements_node)
@@ -123,6 +141,11 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(recommended_studying_path_results_node)
         self.interviews_evaluations_node.connect(satisfaction_with_studying_results_node)
         self.interviews_evaluations_node.connect(working_in_teams_results_node)
+        self.interviews_evaluations_node.connect(modules_not_practical_node)
+        self.interviews_evaluations_node.connect(old_irrelevant_modules_node)
+        self.interviews_evaluations_node.connect(topics_most_valuable_node)
+        self.interviews_evaluations_node.connect(most_liked_modules_node)
+        self.interviews_evaluations_node.connect(topics_know_more_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -150,3 +173,8 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(recommended_studying_path_results_node)
         graph.add_new_node_to_graph(satisfaction_with_studying_results_node)
         graph.add_new_node_to_graph(working_in_teams_results_node)
+        graph.add_new_node_to_graph(modules_not_practical_node)
+        graph.add_new_node_to_graph(old_irrelevant_modules_node)
+        graph.add_new_node_to_graph(most_liked_modules_node)
+        graph.add_new_node_to_graph(topics_most_valuable_node)
+        graph.add_new_node_to_graph(topics_know_more_node)

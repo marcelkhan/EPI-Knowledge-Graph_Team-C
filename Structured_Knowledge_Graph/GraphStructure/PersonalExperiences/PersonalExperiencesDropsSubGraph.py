@@ -4,7 +4,8 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import DropsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Drops import ExamRequirementsNodeData, \
-    RequirementsNodeData, AmountWritenExamsNodeData, KickoffOrgaNodeData, OldProgrammingLanguagesNodeData
+    RequirementsNodeData, AmountWritenExamsNodeData, KickoffOrgaNodeData, OldProgrammingLanguagesNodeData, \
+    BulkLearningExamsNodeData, ChatgptToSolveTasksNodeData, LateAssignmentsNodeData
 
 
 class PersonalExperiencesDropsSubGraph:
@@ -32,11 +33,23 @@ class PersonalExperiencesDropsSubGraph:
         old_programming_languages = NodeKnowledge(titel=OldProgrammingLanguagesNodeData.TITLE,
                                                 description=OldProgrammingLanguagesNodeData.CONTENT)
 
+        bulk_learning_exams_node = NodeKnowledge(titel=BulkLearningExamsNodeData.TITLE,
+                                                 description=BulkLearningExamsNodeData.CONTENT)
+
+        chatgpt_to_solve_tasks_node = NodeKnowledge(titel=ChatgptToSolveTasksNodeData.TITLE,
+                                                    description=ChatgptToSolveTasksNodeData.CONTENT)
+
+        late_assignments_node = NodeKnowledge(titel=LateAssignmentsNodeData.TITLE,
+                                              description=LateAssignmentsNodeData.CONTENT)
+
         self.personal_experiences_drops_node.connect(exam_requirements_node)
         self.personal_experiences_drops_node.connect(requirements_node)
         self.personal_experiences_drops_node.connect(amount_written_exams_node)
         self.personal_experiences_drops_node.connect(kickoff_orga_node)
         self.personal_experiences_drops_node.connect(old_programming_languages)
+        self.personal_experiences_drops_node.connect(bulk_learning_exams_node)
+        self.personal_experiences_drops_node.connect(chatgpt_to_solve_tasks_node)
+        self.personal_experiences_drops_node.connect(late_assignments_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_drops_node)
         graph.add_new_node_to_graph(exam_requirements_node)
@@ -44,3 +57,6 @@ class PersonalExperiencesDropsSubGraph:
         graph.add_new_node_to_graph(amount_written_exams_node)
         graph.add_new_node_to_graph(kickoff_orga_node)
         graph.add_new_node_to_graph(old_programming_languages)
+        graph.add_new_node_to_graph(bulk_learning_exams_node)
+        graph.add_new_node_to_graph(chatgpt_to_solve_tasks_node)
+        graph.add_new_node_to_graph(late_assignments_node)
