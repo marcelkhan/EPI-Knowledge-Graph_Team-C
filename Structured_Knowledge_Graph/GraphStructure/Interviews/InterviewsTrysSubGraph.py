@@ -5,9 +5,10 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, \
     WorkingInTeamsTrysNodeData, DeficitFrontendDevelopmentNodeData, DeficitHardwareNodeData, DeficitITSecurityNodeData, \
     InteractiveModulesNodeData, MakeModulesInteractiveNodeData, MakeModulesInteresstingNodeData, \
-    ModulesCloserToRealityNodeData, ElectiveSubjectNodeData, ModernAgileCurriculumNodeData, ProjectNodeData
+    ModulesCloserToRealityNodeData, ElectiveSubjectNodeData, ModernAgileCurriculumNodeData, ProjectNodeData,ExkursfuerErstisNodeData,\
+    ThKoelnJobNodeData,VorteileTHKoelnNodeData,WannWelcheModuleNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
-from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Trys import VisitMoreLecturesNodeData
+
 
 
 class InterviewsTrysSubGraph:
@@ -53,6 +54,12 @@ class InterviewsTrysSubGraph:
         modules_closer_to_reality_node = NodeKnowledge(titel=ModulesCloserToRealityNodeData.TITLE,
                                                        description=ModulesCloserToRealityNodeData.CONTENT)
 
+        exkurs_node=NodeKnowledge(titel=ExkursfuerErstisNodeData.TITEL,description=ExkursfuerErstisNodeData.CONTENT)
+        jobboerse_node=NodeKnowledge(titel=ThKoelnJobNodeData.TITEL,description=ThKoelnJobNodeData.CONTENT)
+        vorteile_node=NodeKnowledge(titel=VorteileTHKoelnNodeData.TITEL,description=VorteileTHKoelnNodeData.CONTENT)
+        wann_node=NodeKnowledge(titel=WannWelcheModuleNodeData.TITEL,description=WannWelcheModuleNodeData.CONTENT)
+
+
         self.interviews_trys_node.connect(expectations_trys_node)
         self.interviews_trys_node.connect(working_in_teams_trys_node)
         self.interviews_trys_node.connect(deficit_frontend_development_node)
@@ -65,6 +72,10 @@ class InterviewsTrysSubGraph:
         self.interviews_trys_node.connect(make_modules_interactive_node)
         self.interviews_trys_node.connect(make_modules_interessting_node)
         self.interviews_trys_node.connect(modules_closer_to_reality_node)
+        self.interviews_trys_node.connect(exkurs_node)
+        self.interviews_trys_node.connect(jobboerse_node)
+        self.interviews_trys_node.connect(vorteile_node)
+        self.interviews_trys_node.connect(wann_node)
 
 
 
@@ -81,3 +92,7 @@ class InterviewsTrysSubGraph:
         graph.add_new_node_to_graph(make_modules_interactive_node)
         graph.add_new_node_to_graph(make_modules_interessting_node)
         graph.add_new_node_to_graph(modules_closer_to_reality_node)
+        graph.add_new_node_to_graph(exkurs_node)
+        graph.add_new_node_to_graph(jobboerse_node)
+        graph.add_new_node_to_graph(vorteile_node)
+        graph.add_new_node_to_graph(wann_node)

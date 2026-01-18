@@ -15,7 +15,7 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData, \
     LearningQualityNodeData, LearningQualityResultsNodeData, MissingKnowledgeNodeData, PreferredExamNodeData, \
     PreferredExamResultsNodeData, SkillFocusNodeData, UnnecessaryClassesNodeData, TopicsKnowMoreNodeData, ModulesNotPracticalNodeData, MostLikedModulesNodeData, OldIrrelevantModulesNodeData, \
-    TopicsMostValuableNodeData
+    TopicsMostValuableNodeData, AuswertungThemesYouWantToKnowMoreNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -131,6 +131,8 @@ class InterviewsEvaluationsSubGraph:
 
         topics_most_valuable_node = NodeKnowledge(titel=TopicsMostValuableNodeData.TITEL,
                                                   description=TopicsMostValuableNodeData.CONTENT)
+        themes_you_want_more_node=NodeKnowledge(titel=AuswertungThemesYouWantToKnowMoreNodeData.TITEL,description=AuswertungThemesYouWantToKnowMoreNodeData.CONTENT)
+
 
 
         self.interviews_evaluations_node.connect(expectations_node)
@@ -170,6 +172,7 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(preferred_exam_results_node)
         self.interviews_evaluations_node.connect(skill_focus_node)
         self.interviews_evaluations_node.connect(unnecessary_classes_node)
+        self.interviews_evaluations_node.connect(themes_you_want_more_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -209,3 +212,4 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(most_liked_modules_node)
         graph.add_new_node_to_graph(topics_most_valuable_node)
         graph.add_new_node_to_graph(topics_know_more_node)
+        graph.add_new_node_to_graph(themes_you_want_more_node)
