@@ -1,0 +1,25 @@
+# Created by Milan Littfin on 18.01.2026
+
+TITLE = "Ausstattung der Hochschule"
+
+CONTENT = ("Meiner Erfahrung nach ist die Hochschule sehr darum bemüht, ihre Ausstattung auf einem modernen "
+           "Stand zu halten. Die bereitgestellten PCs decken ein breites Spektrum ab und ermöglichen das "
+           "Arbeiten mit verschiedenen Betriebssystemen wie Windows sowie Unix-basierten Systemen und "
+           "Linux-Distributionen (z. B. Ubuntu). Dies ist essenziell, um die Vielfalt der industriellen IT-Landschaft "
+           "bereits im Studium kennenzulernen.\n"
+           "Zudem verfügen die Labore über spezifische Hardware, die den Praxisbezug der Lehre massiv unterstützt. "
+           "Ein hervorragendes Beispiel hierfür ist der Roboterarm mit welchem im Wahlpflichtfach Robotik komplexe "
+           "Steuerungsabläufe direkt erprobt werden können. Die Hardware ist leistungsstark und zuverlässig, was "
+           "einen reibungslosen Ablauf im regulären Laborbetrieb als auch bei digitalen Prüfungen vor Ort ermöglicht.\n"
+           "Besonders hervorzuheben ist das umfangreiche Softwareangebot für die Studierenden. Lizenzen für "
+           "professionelle Entwicklungsumgebungen wie die ‚JetBrains Educational Suite‘, das Office-365-Paket "
+           "sowie der Zugang zu kostenfreiem Cloud-Speicher ermöglichen ein effektives Arbeiten und den "
+           "unkomplizierten Datenaustausch innerhalb von Projektgruppen wie ich sie "
+           "im Fach Mensch-Computer-Interaktion nutzen konnte.\n"
+           "Auch die Infrastruktur für das mobile Arbeiten ist gut ausgebaut: Das flächendeckende WLAN "
+           "sowie die hohe Dichte an Steckdosen in den Lernräumen erlauben es uns, über längere Zeiträume "
+           "ununterbrochen mit eigenen Geräten zu recherchieren und zu arbeiten. Insgesamt ist die Ausstattung der "
+           "Hochschule sehr zufriedenstellend. Es bleibt jedoch wichtig, dass die Hochschule auch künftig "
+           "kontinuierlich in moderne Forschungstechnologien investieren muss, um den Studierenden weiterhin "
+           "ein zeitgemäßes Experimentierumfeld zu bieten.\n\n"
+           "### Autor: Milan Littfin\n")
