@@ -4,7 +4,7 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Keeps import ExpectationsKeepsNodeData, \
     StudyingSatisfactionKeepsNodeData, SatisfactionWithStudyingKeepsNodeData, OrganisationKeepsNodeData, \
-    RecommendedStudyingPathKeepsNodeData
+    RecommendedStudyingPathKeepsNodeData, AmountQualityTopicsNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 
 
@@ -33,11 +33,15 @@ class InterviewsKeepsSubGraph:
         recommended_studying_path_keeps_node = NodeKnowledge(titel=RecommendedStudyingPathKeepsNodeData.TITEL,
                                                              description=RecommendedStudyingPathKeepsNodeData.CONTENT)
 
+        amount_quality_topics_node = NodeKnowledge(titel=AmountQualityTopicsNodeData.TITLE,
+                                                   description=AmountQualityTopicsNodeData.CONTENT)
+
         self.interviews_keeps_node.connect(expectations_keeps_node)
         self.interviews_keeps_node.connect(studying_satisfaction_keeps_node)
         self.interviews_keeps_node.connect(satisfaction_with_studying_keeps_node)
         self.interviews_keeps_node.connect(organisation_keeps_node)
         self.interviews_keeps_node.connect(recommended_studying_path_keeps_node)
+        self.interviews_keeps_node.connect(amount_quality_topics_node)
 
         graph.add_new_node_to_graph(self.interviews_keeps_node)
         graph.add_new_node_to_graph(expectations_keeps_node)
@@ -45,3 +49,4 @@ class InterviewsKeepsSubGraph:
         graph.add_new_node_to_graph(satisfaction_with_studying_keeps_node)
         graph.add_new_node_to_graph(organisation_keeps_node)
         graph.add_new_node_to_graph(recommended_studying_path_keeps_node)
+        graph.add_new_node_to_graph(amount_quality_topics_node)
