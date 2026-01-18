@@ -2,9 +2,10 @@
 from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
+from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import ChatGPTNutzenumLoesungsWegezuerstellenNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import DropsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Drops import ExamRequirementsNodeData, \
-    RequirementsNodeData, AmountWritenExamsNodeData, KickoffOrgaNodeData, OldProgrammingLanguagesNodeData
+    RequirementsNodeData,ChatGPTFuersLoesenVonAufgabenNoteData, BolemieLernenVorDerKlausurNodeData,SpaetAbgabenNodeData
 
 
 class PersonalExperiencesDropsSubGraph:
@@ -17,30 +18,32 @@ class PersonalExperiencesDropsSubGraph:
         self.personal_experiences_drops_node = NodeIllustration(titel=DropsNodeData.TITLE,
                                                                 image_name=DropsNodeData.IMAGE_NAME)
 
+
         exam_requirements_node = NodeKnowledge(titel=ExamRequirementsNodeData.TITLE,
                                                description=ExamRequirementsNodeData.CONTENT)
 
         requirements_node = NodeKnowledge(titel=RequirementsNodeData.TITLE,
                                           description=RequirementsNodeData.CONTENT)
 
-        amount_written_exams_node= NodeKnowledge(titel=AmountWritenExamsNodeData.TITLE,
-                                                 description=AmountWritenExamsNodeData.CONTENT)
+        chatGpt_node=NodeKnowledge(titel=ChatGPTFuersLoesenVonAufgabenNoteData.TITLE,
+                                   description=ChatGPTFuersLoesenVonAufgabenNoteData.CONTENT)
 
-        kickoff_orga_node = NodeKnowledge(titel=KickoffOrgaNodeData.TITLE,
-                                          description=KickoffOrgaNodeData.CONTENT)
+        bulimieLernen_node=NodeKnowledge(titel=BolemieLernenVorDerKlausurNodeData.TITLE,description=BolemieLernenVorDerKlausurNodeData.CONTENT)
+        spaet_Abgeben_node=NodeKnowledge(titel=SpaetAbgabenNodeData.TITLE,description=SpaetAbgabenNodeData.CONTENT)
 
-        old_programming_languages = NodeKnowledge(titel=OldProgrammingLanguagesNodeData.TITLE,
-                                                description=OldProgrammingLanguagesNodeData.CONTENT)
 
         self.personal_experiences_drops_node.connect(exam_requirements_node)
         self.personal_experiences_drops_node.connect(requirements_node)
-        self.personal_experiences_drops_node.connect(amount_written_exams_node)
-        self.personal_experiences_drops_node.connect(kickoff_orga_node)
-        self.personal_experiences_drops_node.connect(old_programming_languages)
+        self.personal_experiences_drops_node.connect(bulimieLernen_node)
+        self.personal_experiences_drops_node.connect(chatGpt_node)
+        self.personal_experiences_drops_node.connect(spaet_Abgeben_node)
+
+
 
         graph.add_new_node_to_graph(self.personal_experiences_drops_node)
         graph.add_new_node_to_graph(exam_requirements_node)
         graph.add_new_node_to_graph(requirements_node)
-        graph.add_new_node_to_graph(amount_written_exams_node)
-        graph.add_new_node_to_graph(kickoff_orga_node)
-        graph.add_new_node_to_graph(old_programming_languages)
+        graph.add_new_node_to_graph(chatGpt_node)
+
+        graph.add_new_node_to_graph(bulimieLernen_node)
+        graph.add_new_node_to_graph(spaet_Abgeben_node)

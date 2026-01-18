@@ -8,7 +8,7 @@ CONTENT = ("Aus eigener Erfahrung zählen unklare Prüfungsanforderungen zu den 
            "strukturierte Vorbereitung und führt häufig zu ineffizientem Lernen.\n\n"
            "Besonders problematisch ist aus meiner Sicht, die fehlende Transparenz die nicht nur den Lernprozess "
            "beeinträchtigt, sondern auch das Vertrauen in die Fairness der Bewertung untergräbt. "
-           "Studierende sind dann gezwungen, Annahmen über Erwartungen zu treffen, statt sich an klaren "
+           "Studierende sind dann gezwungen, Annahmen überErwartungen zu treffen, statt sich an klaren "
            "Vorgaben orientieren zu können.\n\n"
            "Im Team herrscht hier nahezu vollständiger Konsens.\n\n"
            "### Autor: Marcel Khan\n")

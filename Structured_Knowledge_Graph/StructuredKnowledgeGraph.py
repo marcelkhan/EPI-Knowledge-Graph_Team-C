@@ -1,5 +1,6 @@
 # Created by Marcel Khan on 27.11.25.
 from GraphModel.Graph import Graph
+from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphStructure.EvaluationSubGraph import EvaluationSubGraph
 from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsDropsSubGraph import InterviewsDropsSubGraph
 from Structured_Knowledge_Graph.GraphStructure.Interviews.InterviewsKeepsSubGraph import InterviewsKeepsSubGraph
@@ -10,6 +11,7 @@ from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExper
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesKeepsSubGraph import PersonalExperiencesKeepsSubGraph
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesSubGraph import PersonalExperiencesSubGraph
 from Structured_Knowledge_Graph.GraphStructure.PersonalExperiences.PersonalExperiencesTrysSubGraph import PersonalExperiencesTrysSubGraph
+from Structured_Knowledge_Graph.GraphContent.Evaluation import ModuleambestebundgefallenNodeData
 
 
 class StructuredKnowledgeGraph:
@@ -24,6 +26,7 @@ class StructuredKnowledgeGraph:
     interviews_drops_subgraph: InterviewsDropsSubGraph
     interviews_trys_subgraph: InterviewsTrysSubGraph
     interviews_evaluations_subgraph: InterviewsEvaluationsSubGraph
+
 
     def __init__(self, graph: Graph):
         self.assemble_graph(graph)
@@ -40,6 +43,8 @@ class StructuredKnowledgeGraph:
         self.interviews_drops_subgraph = InterviewsDropsSubGraph(graph)
         self.interviews_trys_subgraph = InterviewsTrysSubGraph(graph)
         self.interviews_evaluations_subgraph = InterviewsEvaluationsSubGraph(graph)
+
+
 
     def connect_sub_graphs(self):
         # evaluation
@@ -71,6 +76,5 @@ class StructuredKnowledgeGraph:
         self.interviews_subgraph.interviews_node.connect(
             self.interviews_trys_subgraph.interviews_trys_node
         )
-        self.interviews_subgraph.interviews_node.connect(
-            self.interviews_evaluations_subgraph.interviews_evaluations_node
-        )
+
+modulambesten_node=NodeKnowledge(titel=ModuleambestebundgefallenNodeData.TITLE,description=ModuleambestebundgefallenNodeData.CONTENT)

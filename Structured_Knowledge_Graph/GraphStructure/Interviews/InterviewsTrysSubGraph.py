@@ -2,7 +2,8 @@
 from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
-from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, WorkingInTeamsTrysNodeData
+from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, WorkingInTeamsTrysNodeData,\
+    MitIntressanterGestaltenNodeData,NaeherAnEchtenSzenariosAnpassenNodeData,TRYModulsMoreInteraktivNodeData, MoreInteractiveDataNode
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 
 
@@ -21,10 +22,21 @@ class InterviewsTrysSubGraph:
 
         working_in_teams_trys_node = NodeKnowledge(titel=WorkingInTeamsTrysNodeData.TITEL,
                                                   description=WorkingInTeamsTrysNodeData.CONTENT)
+        modules_with_Intrest_node=NodeKnowledge(titel=MitIntressanterGestaltenNodeData.TITLE,description=MitIntressanterGestaltenNodeData.CONTENT)
+        modules_More_Interactive_node=NodeKnowledge(titel=MoreInteractiveDataNode.TITLE,description=MoreInteractiveDataNode.CONTENT)
+        modules_closer_Szenarios_nodes=NodeKnowledge(titel=NaeherAnEchtenSzenariosAnpassenNodeData.TITLE,description=NaeherAnEchtenSzenariosAnpassenNodeData.CONTENT)
+
 
         self.interviews_trys_node.connect(expectations_trys_node)
         self.interviews_trys_node.connect(working_in_teams_trys_node)
 
+        self.interviews_trys_node.connect(modules_More_Interactive_node)
+        self.interviews_trys_node.connect( modules_closer_Szenarios_nodes)
+        self.interviews_trys_node.connect(modules_with_Intrest_node)
+
         graph.add_new_node_to_graph(self.interviews_trys_node)
         graph.add_new_node_to_graph(expectations_trys_node)
         graph.add_new_node_to_graph(working_in_teams_trys_node)
+        graph.add_new_node_to_graph(modules_More_Interactive_node)
+        graph.add_new_node_to_graph(modules_closer_Szenarios_nodes)
+        graph.add_new_node_to_graph(modules_with_Intrest_node)

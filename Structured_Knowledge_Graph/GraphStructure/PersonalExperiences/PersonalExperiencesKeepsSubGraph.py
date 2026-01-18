@@ -8,9 +8,7 @@ from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import ProjectorientedModulesNodeData, \
     TeamworkNodeData, ModernSoftwareDevelopmentConceptsNodeData, PersonalResponsibilityNodeData, AvailabilityNodeData, \
     ClearModuleStructuresNodeData, LectureAndExercisesNodeData, FundamentalConceptsNodeData, CoreSubjectsNodeData, \
-    AcademicResearchNodeData, CourseSpotAvailabilityNodeData, DigitalOrganisationNodeData, YearlyStructureNodeData, \
-    PracticalRelevanceNodeData, CreativeCourseDesignNodeData, IntroductoryModulesNodeData, WorkWithCompaniesNodeData, \
-    WorkingWithProfsNodeData, ModuleStructureNodeData, ModernEquipmentNodeData, GuestLecturesNodeData
+    AcademicResearchNodeData,ChatGPTNutzenumLoesungsWegezuerstellenNodeData,OragnisedWorkNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -53,38 +51,8 @@ class PersonalExperiencesKeepsSubGraph:
         academic_research_node = NodeKnowledge(titel=AcademicResearchNodeData.TITLE,
                                                description=AcademicResearchNodeData.CONTENT)
 
-        course_spot_availability_node = NodeKnowledge(titel=CourseSpotAvailabilityNodeData.TITLE,
-                                                      description=CourseSpotAvailabilityNodeData.CONTENT)
-
-        digital_organisation_node = NodeKnowledge(titel=DigitalOrganisationNodeData.TITLE,
-                                                  description=DigitalOrganisationNodeData.CONTENT)
-
-        yearly_structure_node = NodeKnowledge(titel=YearlyStructureNodeData.TITLE,
-                                              description=YearlyStructureNodeData.CONTENT)
-
-        practical_relevance_node = NodeKnowledge(titel=PracticalRelevanceNodeData.TITLE,
-                                                 description=PracticalRelevanceNodeData.CONTENT)
-
-        creative_course_design_node = NodeKnowledge(titel=CreativeCourseDesignNodeData.TITLE,
-                                                    description=CreativeCourseDesignNodeData.CONTENT)
-
-        introductory_modules_node = NodeKnowledge(titel=IntroductoryModulesNodeData.TITLE,
-                                                  description=IntroductoryModulesNodeData.CONTENT)
-
-        work_with_companies_node = NodeKnowledge(titel=WorkWithCompaniesNodeData.TITLE,
-                                                 description=WorkWithCompaniesNodeData.CONTENT)
-
-        working_with_profs_node = NodeKnowledge(titel=WorkingWithProfsNodeData.TITLE,
-                                                description=WorkingWithProfsNodeData.CONTENT)
-
-        module_structure_node = NodeKnowledge(titel=ModuleStructureNodeData.TITLE,
-                                              description=ModuleStructureNodeData.CONTENT)
-
-        modern_equipment_node = NodeKnowledge(titel=ModernEquipmentNodeData.TITLE,
-                                              description=ModernEquipmentNodeData.CONTENT)
-
-        guest_lectures_node = NodeKnowledge(titel=GuestLecturesNodeData.TITLE,
-                                            description=GuestLecturesNodeData.CONTENT)
+        chatgpt_node=NodeKnowledge(titel=ChatGPTNutzenumLoesungsWegezuerstellenNodeData.TITLE,description=ChatGPTNutzenumLoesungsWegezuerstellenNodeData.CONTENT)
+        organised_Work_node=NodeKnowledge(titel=OragnisedWorkNodeData.TITLE,description=OragnisedWorkNodeData.CONTENT)
 
         self.personal_experiences_keeps_node.connect(projectoriented_modules_node)
         self.personal_experiences_keeps_node.connect(teamwork_node)
@@ -96,18 +64,8 @@ class PersonalExperiencesKeepsSubGraph:
         self.personal_experiences_keeps_node.connect(fundamental_concepts_node)
         self.personal_experiences_keeps_node.connect(core_subjects_node)
         self.personal_experiences_keeps_node.connect(academic_research_node)
-        self.personal_experiences_keeps_node.connect(course_spot_availability_node)
-        self.personal_experiences_keeps_node.connect(digital_organisation_node)
-        self.personal_experiences_keeps_node.connect(yearly_structure_node)
-        self.personal_experiences_keeps_node.connect(practical_relevance_node)
-        self.personal_experiences_keeps_node.connect(creative_course_design_node)
-        self.personal_experiences_keeps_node.connect(introductory_modules_node)
-        self.personal_experiences_keeps_node.connect(work_with_companies_node)
-        self.personal_experiences_keeps_node.connect(working_with_profs_node)
-        self.personal_experiences_keeps_node.connect(module_structure_node)
-        self.personal_experiences_keeps_node.connect(modern_equipment_node)
-        self.personal_experiences_keeps_node.connect(guest_lectures_node)
-
+        self.personal_experiences_keeps_node.connect(chatgpt_node)
+        self.personal_experiences_keeps_node.connect(organised_Work_node)
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
         graph.add_new_node_to_graph(projectoriented_modules_node)
         graph.add_new_node_to_graph(teamwork_node)
@@ -119,14 +77,5 @@ class PersonalExperiencesKeepsSubGraph:
         graph.add_new_node_to_graph(fundamental_concepts_node)
         graph.add_new_node_to_graph(core_subjects_node)
         graph.add_new_node_to_graph(academic_research_node)
-        graph.add_new_node_to_graph(course_spot_availability_node)
-        graph.add_new_node_to_graph(digital_organisation_node)
-        graph.add_new_node_to_graph(yearly_structure_node)
-        graph.add_new_node_to_graph(practical_relevance_node)
-        graph.add_new_node_to_graph(creative_course_design_node)
-        graph.add_new_node_to_graph(introductory_modules_node)
-        graph.add_new_node_to_graph(work_with_companies_node)
-        graph.add_new_node_to_graph(working_with_profs_node)
-        graph.add_new_node_to_graph(module_structure_node)
-        graph.add_new_node_to_graph(modern_equipment_node)
-        graph.add_new_node_to_graph(guest_lectures_node)
+        graph.add_new_node_to_graph(chatgpt_node)
+        graph.add_new_node_to_graph(organised_Work_node)
