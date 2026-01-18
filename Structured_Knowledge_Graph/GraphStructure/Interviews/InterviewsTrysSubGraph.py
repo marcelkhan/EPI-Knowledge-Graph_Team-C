@@ -4,7 +4,7 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, \
     WorkingInTeamsTrysNodeData, DeficitFrontendDevelopmentNodeData, DeficitHardwareNodeData, DeficitITSecurityNodeData, \
-    InteractiveModulesNodeData
+    InteractiveModulesNodeData, ElectiveSubjectNodeData, ModernAgileCurriculumNodeData, ProjectNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 
 
@@ -35,6 +35,12 @@ class InterviewsTrysSubGraph:
 
         interactive_modules_node = NodeKnowledge(titel=InteractiveModulesNodeData.TITLE,
                                                  description=InteractiveModulesNodeData.CONTENT)
+        elective_subject_node = NodeKnowledge(titel=ElectiveSubjectNodeData.TITLE,
+                                              description=ElectiveSubjectNodeData.CONTENT)
+        modern_agile_node = NodeKnowledge(titel=ModernAgileCurriculumNodeData.TITLE,
+                                          description=ModernAgileCurriculumNodeData.CONTENT)
+        projects_node = NodeKnowledge(titel=ProjectNodeData.TITLE,
+                                      description=ProjectNodeData.CONTENT)
 
         self.interviews_trys_node.connect(expectations_trys_node)
         self.interviews_trys_node.connect(working_in_teams_trys_node)
@@ -42,6 +48,9 @@ class InterviewsTrysSubGraph:
         self.interviews_trys_node.connect(deficit_hardware_node)
         self.interviews_trys_node.connect(deficit_it_security_node)
         self.interviews_trys_node.connect(interactive_modules_node)
+        self.interviews_trys_node.connect(elective_subject_node)
+        self.interviews_trys_node.connect(modern_agile_node)
+        self.interviews_trys_node.connect(projects_node)
 
 
         graph.add_new_node_to_graph(self.interviews_trys_node)
@@ -51,3 +60,6 @@ class InterviewsTrysSubGraph:
         graph.add_new_node_to_graph(deficit_hardware_node)
         graph.add_new_node_to_graph(deficit_it_security_node)
         graph.add_new_node_to_graph(interactive_modules_node)
+        graph.add_new_node_to_graph(elective_subject_node)
+        graph.add_new_node_to_graph(modern_agile_node)
+        graph.add_new_node_to_graph(projects_node)

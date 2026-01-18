@@ -1,4 +1,6 @@
 # Created by Timon Kirch on 17.01.26.
+from pygame.examples.cursors import image_name
+
 from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
@@ -10,7 +12,9 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     AgedExamTypesNodeData, AmountOfTopicsNodeData, AmountOfTopicsResultsNodeData, QualityOfTopicsNodeData, \
     QualityOfTopicsResultsNodeData, IncreaseOfLectureTypeResultsNodeData, IncreaseOfLectureTypeNodeData, \
     WorkingInTeamsNodeData, SatisfactionWithStudyingNodeData, OrganisationNodeData, OrganisationResultsNodeData, \
-    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData
+    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData, \
+    LearningQualityNodeData, LearningQualityResultsNodeData, MissingKnowledgeNodeData, PreferredExamNodeData, \
+    PreferredExamResultsNodeData, SkillFocusNodeData, UnnecessaryClassesNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -97,6 +101,20 @@ class InterviewsEvaluationsSubGraph:
 
         working_in_teams_results_node = NodeKnowledge(titel=WorkingInTeamsResultsNodeData.TITEL,
                                                       description=WorkingInTeamsResultsNodeData.CONTENT)
+        learning_quality_node = NodeIllustration(titel=LearningQualityNodeData.TITEL,
+                                              image_name=LearningQualityNodeData.IMAGE_NAME)
+        learning_quality_results_node = NodeKnowledge(titel=LearningQualityResultsNodeData.TITEL,
+                                                      description=LearningQualityResultsNodeData.CONTENT)
+        missing_knowledge_node = NodeKnowledge(titel=MissingKnowledgeNodeData.TITEL,
+                                               description=MissingKnowledgeNodeData.CONTENT)
+        preferred_exam_node = NodeIllustration(titel=PreferredExamNodeData.TITEL,
+                                               image_name=PreferredExamNodeData.IMAGE_NAME)
+        preferred_exam_results_node = NodeKnowledge(titel=PreferredExamResultsNodeData.TITEL,
+                                                    description=PreferredExamResultsNodeData.CONTENT)
+        skill_focus_node = NodeKnowledge(titel=SkillFocusNodeData.TITEL,
+                                         description=SkillFocusNodeData.CONTENT)
+        unnecessary_classes_node = NodeKnowledge(titel=UnnecessaryClassesNodeData.TITEL,
+                                                 description=UnnecessaryClassesNodeData.CONTENT)
 
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
@@ -123,6 +141,13 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(recommended_studying_path_results_node)
         self.interviews_evaluations_node.connect(satisfaction_with_studying_results_node)
         self.interviews_evaluations_node.connect(working_in_teams_results_node)
+        self.interviews_evaluations_node.connect(learning_quality_node)
+        self.interviews_evaluations_node.connect(learning_quality_results_node)
+        self.interviews_evaluations_node.connect(missing_knowledge_node)
+        self.interviews_evaluations_node.connect(preferred_exam_node)
+        self.interviews_evaluations_node.connect(preferred_exam_results_node)
+        self.interviews_evaluations_node.connect(skill_focus_node)
+        self.interviews_evaluations_node.connect(unnecessary_classes_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -150,3 +175,10 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(recommended_studying_path_results_node)
         graph.add_new_node_to_graph(satisfaction_with_studying_results_node)
         graph.add_new_node_to_graph(working_in_teams_results_node)
+        graph.add_new_node_to_graph(learning_quality_node)
+        graph.add_new_node_to_graph(learning_quality_results_node)
+        graph.add_new_node_to_graph(missing_knowledge_node)
+        graph.add_new_node_to_graph(preferred_exam_node)
+        graph.add_new_node_to_graph(preferred_exam_results_node)
+        graph.add_new_node_to_graph(skill_focus_node)
+        graph.add_new_node_to_graph(unnecessary_classes_node)

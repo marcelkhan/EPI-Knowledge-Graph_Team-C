@@ -10,7 +10,8 @@ from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import Pr
     ClearModuleStructuresNodeData, LectureAndExercisesNodeData, FundamentalConceptsNodeData, CoreSubjectsNodeData, \
     AcademicResearchNodeData, CourseSpotAvailabilityNodeData, DigitalOrganisationNodeData, YearlyStructureNodeData, \
     PracticalRelevanceNodeData, CreativeCourseDesignNodeData, IntroductoryModulesNodeData, WorkWithCompaniesNodeData, \
-    WorkingWithProfsNodeData, ModuleStructureNodeData, ModernEquipmentNodeData, GuestLecturesNodeData
+    WorkingWithProfsNodeData, ModuleStructureNodeData, ModernEquipmentNodeData, GuestLecturesNodeData, \
+    ExercisesNodeData, FeedbackCultureNodeData, SchoolEquipmentNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -85,6 +86,12 @@ class PersonalExperiencesKeepsSubGraph:
 
         guest_lectures_node = NodeKnowledge(titel=GuestLecturesNodeData.TITLE,
                                             description=GuestLecturesNodeData.CONTENT)
+        exercises_node = NodeKnowledge(titel=ExercisesNodeData.TITLE,
+                                       description=ExercisesNodeData.CONTENT)
+        feedback_culture_node = NodeKnowledge(titel=FeedbackCultureNodeData.TITLE,
+                                              description=FeedbackCultureNodeData.CONTENT)
+        school_equipment_node = NodeKnowledge(titel=SchoolEquipmentNodeData.TITLE,
+                                              description=SchoolEquipmentNodeData.CONTENT)
 
         self.personal_experiences_keeps_node.connect(projectoriented_modules_node)
         self.personal_experiences_keeps_node.connect(teamwork_node)
@@ -107,6 +114,9 @@ class PersonalExperiencesKeepsSubGraph:
         self.personal_experiences_keeps_node.connect(module_structure_node)
         self.personal_experiences_keeps_node.connect(modern_equipment_node)
         self.personal_experiences_keeps_node.connect(guest_lectures_node)
+        self.personal_experiences_keeps_node.connect(exercises_node)
+        self.personal_experiences_keeps_node.connect(feedback_culture_node)
+        self.personal_experiences_keeps_node.connect(school_equipment_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
         graph.add_new_node_to_graph(projectoriented_modules_node)
@@ -130,3 +140,6 @@ class PersonalExperiencesKeepsSubGraph:
         graph.add_new_node_to_graph(module_structure_node)
         graph.add_new_node_to_graph(modern_equipment_node)
         graph.add_new_node_to_graph(guest_lectures_node)
+        graph.add_new_node_to_graph(exercises_node)
+        graph.add_new_node_to_graph(feedback_culture_node)
+        graph.add_new_node_to_graph(school_equipment_node)

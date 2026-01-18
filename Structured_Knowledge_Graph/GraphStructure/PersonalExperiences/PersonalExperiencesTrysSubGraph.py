@@ -5,7 +5,9 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Trys import PreparationForThesisNodeData, \
     InsecurityNodeData, ComputerScienceInASocialContextNodeData, SupportNodeData, LearningJourneyNodeData, \
-    CourseStructureNodeData, ScientificPapersNodeData, ExamPeriodNodeData, HybridLectureNodeData, MentoringEarlyNodeData
+    CourseStructureNodeData, ScientificPapersNodeData, ExamPeriodNodeData, HybridLectureNodeData, \
+    MentoringEarlyNodeData, DigitalPlatformNodeData, ExamDensityNodeData, JobPrepareNodeData, MilestonesNodeData, \
+    ProgrammingLanguageNodeData
 
 
 class PersonalExperiencesTrysSubGraph:
@@ -47,6 +49,16 @@ class PersonalExperiencesTrysSubGraph:
 
         mentoring_early_node=NodeKnowledge(titel=MentoringEarlyNodeData.TITLE,
                                            description=MentoringEarlyNodeData.CONTENT)
+        digital_platform_node = NodeKnowledge(titel=DigitalPlatformNodeData.TITLE,
+                                              description=DigitalPlatformNodeData.CONTENT)
+        exam_density_node = NodeKnowledge(titel=ExamDensityNodeData.TITLE,
+                                          description=ExamDensityNodeData.CONTENT)
+        job_prepare_node = NodeKnowledge(titel=JobPrepareNodeData.TITLE,
+                                         description=JobPrepareNodeData.CONTENT)
+        milestones_node = NodeKnowledge(titel= MilestonesNodeData.TITLE,
+                                       description=MilestonesNodeData.CONTENT)
+        programming_language_node = NodeKnowledge(titel=ProgrammingLanguageNodeData.TITLE,
+                                                  description=ProgrammingLanguageNodeData.CONTENT)
 
         self.personal_experiences_trys_node.connect(preparation_for_thesis_node)
         self.personal_experiences_trys_node.connect(insecurity_node)
@@ -58,6 +70,11 @@ class PersonalExperiencesTrysSubGraph:
         self.personal_experiences_trys_node.connect(exam_period_node)
         self.personal_experiences_trys_node.connect(hybrid_lecture_node)
         self.personal_experiences_trys_node.connect(mentoring_early_node)
+        self.personal_experiences_trys_node.connect(digital_platform_node)
+        self.personal_experiences_trys_node.connect(exam_density_node)
+        self.personal_experiences_trys_node.connect(job_prepare_node)
+        self.personal_experiences_trys_node.connect(milestones_node)
+        self.personal_experiences_trys_node.connect(programming_language_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_trys_node)
         graph.add_new_node_to_graph(preparation_for_thesis_node)
@@ -70,3 +87,8 @@ class PersonalExperiencesTrysSubGraph:
         graph.add_new_node_to_graph(exam_period_node)
         graph.add_new_node_to_graph(hybrid_lecture_node)
         graph.add_new_node_to_graph(mentoring_early_node)
+        graph.add_new_node_to_graph(digital_platform_node)
+        graph.add_new_node_to_graph(exam_density_node)
+        graph.add_new_node_to_graph(job_prepare_node)
+        graph.add_new_node_to_graph(milestones_node)
+        graph.add_new_node_to_graph(programming_language_node)
