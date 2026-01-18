@@ -1,0 +1,25 @@
+# Created by Milan Littfin on 18.01.2026
+
+TITLE = "Projekte mit kleineren Zwischenabgaben statt großer Finalabgaben"
+
+CONTENT = ("Meiner Meinung nach sollten Projektarbeiten innerhalb eines Moduls durch mehrere kleinere Zwischentermine "
+           "statt durch einen einzigen großen Abgabetermin am Semesterende strukturiert werden. Hier fallen zum "
+           "Beispiel Fächer wie EPI, besonders im Kontext der Aufgabe für Prüfungsordnungswechsler ein.\n\n" 
+           "Mehrere kleine Milestones sorgen dafür, dass sich der Workload über das gesamte Semester verteilt. "
+           "Bei einem einzigen großen Termin besteht die Gefahr, dass die intensive Auseinandersetzung mit dem "
+           "Thema erst kurz vor der Frist beginnt. Ich erlebe dies oft im eigenen Studienverlauf: Viele Abgaben "
+           "werden erst kurz vor dem Termin unter extremem Zeitdruck und mit zahlreichen Nachtschichten "
+           "fertiggestellt. Auch die Arbeit an aktuellen Projekten erfolgt oft erst unmittelbar vor der Deadline, "
+           "was zu enormem Stress und einer Überlastung führt.\n" 
+           "Um die psychische Gesundheit der Studierenden zu schonen und die Arbeitsbelastung besser "
+           "planbar zu machen, wären kleinere Etappenziele sinnvoller. So könnten auch Studierende, die "
+           "zur Prokrastination neigen, ihre Aufgaben ohne extremen Schlafmangel und übermäßigen Koffeinkonsum "
+           "bewältigen. Zudem wird der tatsächliche Aufwand der Aufgaben früher ersichtlich, da man sich mit dem "
+           "Thema beschäftigen muss.\n\n"
+           "Natürlich trägt jeder Studierende eine Eigenverantwortung für sein Zeitmanagement. "
+           "Dennoch bieten Zwischenabgaben auch für die Prüfenden Vorteile: Sie können frühzeitig "
+           "intervenieren, falls Aufgaben nicht wie erwünscht umgesetzt werden. Bei einer einzigen "
+           "großen Abgabe am Ende ist das Risiko eines Scheiterns deutlich höher. Ein positives Gegenbeispiel "
+           "ist das Modul Softwaretechnik, in dem Programmieraufgaben anhand kleinerer Teilvorgaben und "
+           "automatisierter Tests schrittweise gelöst wurden.\n\n"
+           "### Autor: Milan Littfin\n")
