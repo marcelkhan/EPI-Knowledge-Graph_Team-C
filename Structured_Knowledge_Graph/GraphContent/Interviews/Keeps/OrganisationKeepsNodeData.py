@@ -3,10 +3,10 @@ InterviewsNodeData definiert die Inhalte für die Befragungen von Mitstudierende
 Diese Befragungen sollen Einblicke in die Erfahrungen und Meinungen anderer Studierender geben.
 
 Dieser Knoten enthält die "Keeps" zu der Frage:
-"Wie zufrieden bist du insgesamt mit deinem Informatik Studium?"
+"Welche organisatorischen Hürden sollten deiner Meinung nach verbessert werden?"
 """
 
-TITEL = "Keeps - Wie zufrieden bist du insgesamt mit deinem Informatik Studium?"
+TITEL = "keeps - Welche organisatorischen Hürden sollten deiner Meinung nach verbessert werden?"
 
 CONTENT = ("### Verbesserungswürdige organisatorische Aspekte lassen sich aus den einzelnen Nennungen der Studierenden ableiten: \n\n"
            "### - Insgesamt funktionierende Organisation: \n"
