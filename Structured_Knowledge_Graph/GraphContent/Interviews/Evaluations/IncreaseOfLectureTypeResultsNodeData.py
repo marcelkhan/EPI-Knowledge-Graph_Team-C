@@ -15,6 +15,10 @@ CONTENT = ("### Auswertung des Diagramms: Welche der folgenden Lehrformate würd
            "wählen und sollten angeben, von welchem dieser Lehrformate sie sich mehr wünschen würden. Ein Siebtel der "
            "Befragten gab an, dass sie sich mehr ‚Podcasts / Videos von Profs zu Themen (ArchiLab)‘ wünschen würden. "
            "Drei Siebtel wünschten sich mehr ‚Problem Based Learning (reale Probleme annähern und lösen)‘. Drei "
-           "Siebtel der Befragten gaben an, sich mehr ‚Gamification (interaktives Spielen und Lernen)‘ zu wünschen."
+           "Siebtel der Befragten gaben an, sich mehr ‚Gamification (interaktives Spielen und Lernen)‘ zu wünschen. \n\n"
+           "### Qualitative Gesamtauswertung zu der Frage: \n\n"
+           "Ein Großteil der Befragten wünscht sich also, mehr interaktiv mit der Lehrveranstaltung zu interagieren. "
+           "Sie möchten Probleme lösen, ob nun aus der realen Welt oder spielerische Probleme, was verständlich ist, "
+           "da Problemlösung eine der wichtigsten Aufgaben der Informatik darstellt"
            "\n\n"
            "### Autor: Timon Kirch\n")
