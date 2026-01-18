@@ -1,7 +1,10 @@
 # Created by Timon Kirch on 17.01.26.
+from pygame.examples.cursors import image_name
+
 from GraphModel.Graph import Graph
 from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
+from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import TRYModulsMoreInteraktivNodeData
 from Structured_Knowledge_Graph.GraphContent.Interviews import InterviewsEvaluationsNodeData
 from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import ExpectationsNodeData, \
     StudyingSatisfactionNodeData, ExamRequirementsNodeData, TheoreticalAndPracticalAspectsNodeData, \
@@ -10,7 +13,9 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     AgedExamTypesNodeData, AmountOfTopicsNodeData, AmountOfTopicsResultsNodeData, QualityOfTopicsNodeData, \
     QualityOfTopicsResultsNodeData, IncreaseOfLectureTypeResultsNodeData, IncreaseOfLectureTypeNodeData, \
     WorkingInTeamsNodeData, SatisfactionWithStudyingNodeData, OrganisationNodeData, OrganisationResultsNodeData, \
-    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData
+    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData,\
+    WhichModulDidYouLikeTheMostAndWhyNodeData,WhichModulWhichWereIrrelevantOldOrBadTransmittedNodeData,\
+    WhichModulsWhereNotPraxisNearEnoughNodeData,WhichThemesWereEspeciallyWorthNodeData,WhichSubjektsYouWantToKnowMoredNodeData
 
 
 class InterviewsEvaluationsSubGraph:
@@ -97,6 +102,19 @@ class InterviewsEvaluationsSubGraph:
 
         working_in_teams_results_node = NodeKnowledge(titel=WorkingInTeamsResultsNodeData.TITEL,
                                                       description=WorkingInTeamsResultsNodeData.CONTENT)
+        which_Module_did_you_like_the_most_node=NodeKnowledge(titel=WhichModulDidYouLikeTheMostAndWhyNodeData.TITEL,
+                                                              description=WhichModulDidYouLikeTheMostAndWhyNodeData.CONTENT)
+        more_interaktive_node=NodeKnowledge(titel=TRYModulsMoreInteraktivNodeData,
+                                                       description=TRYModulsMoreInteraktivNodeData.CONTENT)
+        which_Module_Were_Irrelevant_Old_Or_Baad_Transmitted_node=NodeKnowledge(titel=WhichModulWhichWereIrrelevantOldOrBadTransmittedNodeData.TITLE,
+                                                                                description=WhichModulWhichWereIrrelevantOldOrBadTransmittedNodeData.CONTENT)
+        which_Module_Were_Not_Praxis_Near_Enough_node=NodeKnowledge(titel=WhichModulsWhereNotPraxisNearEnoughNodeData.TITLE,
+                                                                    description=WhichModulsWhereNotPraxisNearEnoughNodeData.CONTENT)
+
+        which_Themes_Were_Especially_Worht_node=NodeKnowledge(titel=WhichThemesWereEspeciallyWorthNodeData.TITLE,
+                                                              description=WhichThemesWereEspeciallyWorthNodeData.CONTENT)
+        which_Subjekts_You_Want_To_Know_More_node=NodeIllustration(titel=WhichSubjektsYouWantToKnowMoredNodeData.TITEL,
+                                                                image_name=WhichSubjektsYouWantToKnowMoredNodeData.IMAGE_NAME)
 
         self.interviews_evaluations_node.connect(expectations_node)
         self.interviews_evaluations_node.connect(studying_satisfaction_node)
@@ -123,6 +141,12 @@ class InterviewsEvaluationsSubGraph:
         self.interviews_evaluations_node.connect(recommended_studying_path_results_node)
         self.interviews_evaluations_node.connect(satisfaction_with_studying_results_node)
         self.interviews_evaluations_node.connect(working_in_teams_results_node)
+        self.interviews_evaluations_node.connect(which_Module_did_you_like_the_most_node)
+        self.interviews_evaluations_node.connect(which_Module_Were_Irrelevant_Old_Or_Baad_Transmitted_node)
+        self.interviews_evaluations_node.connect(which_Module_Were_Not_Praxis_Near_Enough_node)
+        self.interviews_evaluations_node.connect(which_Themes_Were_Especially_Worht_node)
+        self.interviews_evaluations_node.connect(which_Subjekts_You_Want_To_Know_More_node)
+        ##self.interviews_evaluations_node.connect(more_interaktive_node)
 
         graph.add_new_node_to_graph(self.interviews_evaluations_node)
         graph.add_new_node_to_graph(expectations_node)
@@ -150,3 +174,10 @@ class InterviewsEvaluationsSubGraph:
         graph.add_new_node_to_graph(recommended_studying_path_results_node)
         graph.add_new_node_to_graph(satisfaction_with_studying_results_node)
         graph.add_new_node_to_graph(working_in_teams_results_node)
+        graph.add_new_node_to_graph(which_Module_did_you_like_the_most_node)
+        graph.add_new_node_to_graph(which_Module_Were_Irrelevant_Old_Or_Baad_Transmitted_node)
+        graph.add_new_node_to_graph(which_Module_Were_Not_Praxis_Near_Enough_node)
+        graph.add_new_node_to_graph(which_Themes_Were_Especially_Worht_node)
+        graph.add_new_node_to_graph(which_Subjekts_You_Want_To_Know_More_node)
+        ##graph.add_new_node_to_graph(more_interaktive_node)
+
