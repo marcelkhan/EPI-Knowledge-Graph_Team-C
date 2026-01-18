@@ -4,7 +4,7 @@ from GraphModel.Nodes.NodeIllustration import NodeIllustration
 from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Keeps import ExpectationsKeepsNodeData, \
     StudyingSatisfactionKeepsNodeData, SatisfactionWithStudyingKeepsNodeData, OrganisationKeepsNodeData, \
-    RecommendedStudyingPathKeepsNodeData, AmountQualityTopicsNodeData, MoreInteractiveDataNode
+    RecommendedStudyingPathKeepsNodeData, AmountQualityTopicsNodeData, MoreInteractiveDataNode, ModernClassesNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import KeepsNodeData
 
 
@@ -35,6 +35,8 @@ class InterviewsKeepsSubGraph:
 
         amount_quality_topics_node = NodeKnowledge(titel=AmountQualityTopicsNodeData.TITLE,
                                                    description=AmountQualityTopicsNodeData.CONTENT)
+        modern_classes_node = NodeKnowledge(titel=ModernClassesNodeData.TITLE,
+                                            description=ModernClassesNodeData.CONTENT)
 
         more_interactive_node = NodeKnowledge(titel=MoreInteractiveDataNode.TITLE,
                                               description=MoreInteractiveDataNode.CONTENT)
@@ -46,6 +48,7 @@ class InterviewsKeepsSubGraph:
         self.interviews_keeps_node.connect(recommended_studying_path_keeps_node)
         self.interviews_keeps_node.connect(amount_quality_topics_node)
         self.interviews_keeps_node.connect(more_interactive_node)
+        self.interviews_keeps_node.connect(modern_classes_node)
 
         graph.add_new_node_to_graph(self.interviews_keeps_node)
         graph.add_new_node_to_graph(expectations_keeps_node)
@@ -54,4 +57,5 @@ class InterviewsKeepsSubGraph:
         graph.add_new_node_to_graph(organisation_keeps_node)
         graph.add_new_node_to_graph(recommended_studying_path_keeps_node)
         graph.add_new_node_to_graph(amount_quality_topics_node)
+        graph.add_new_node_to_graph(modern_classes_node)
         graph.add_new_node_to_graph(more_interactive_node)

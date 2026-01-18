@@ -5,7 +5,7 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import DropsNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Drops import ExamRequirementsNodeData, \
     RequirementsNodeData, AmountWritenExamsNodeData, KickoffOrgaNodeData, OldProgrammingLanguagesNodeData, \
-    BulkLearningExamsNodeData, ChatgptToSolveTasksNodeData, LateAssignmentsNodeData
+    ExamMemorizationNodeData, PureLectureNodeData, BulkLearningExamsNodeData, ChatgptToSolveTasksNodeData, LateAssignmentsNodeData
 
 
 class PersonalExperiencesDropsSubGraph:
@@ -32,6 +32,10 @@ class PersonalExperiencesDropsSubGraph:
 
         old_programming_languages = NodeKnowledge(titel=OldProgrammingLanguagesNodeData.TITLE,
                                                 description=OldProgrammingLanguagesNodeData.CONTENT)
+        exam_memorization_node = NodeKnowledge(titel=ExamMemorizationNodeData.TITLE,
+                                               description=ExamMemorizationNodeData.CONTENT)
+        pure_lecture_node = NodeKnowledge(titel=PureLectureNodeData.TITLE,
+                                          description=PureLectureNodeData.CONTENT)
 
         bulk_learning_exams_node = NodeKnowledge(titel=BulkLearningExamsNodeData.TITLE,
                                                  description=BulkLearningExamsNodeData.CONTENT)
@@ -50,6 +54,8 @@ class PersonalExperiencesDropsSubGraph:
         self.personal_experiences_drops_node.connect(bulk_learning_exams_node)
         self.personal_experiences_drops_node.connect(chatgpt_to_solve_tasks_node)
         self.personal_experiences_drops_node.connect(late_assignments_node)
+        self.personal_experiences_drops_node.connect(exam_memorization_node)
+        self.personal_experiences_drops_node.connect(pure_lecture_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_drops_node)
         graph.add_new_node_to_graph(exam_requirements_node)
@@ -57,6 +63,8 @@ class PersonalExperiencesDropsSubGraph:
         graph.add_new_node_to_graph(amount_written_exams_node)
         graph.add_new_node_to_graph(kickoff_orga_node)
         graph.add_new_node_to_graph(old_programming_languages)
+        graph.add_new_node_to_graph(exam_memorization_node)
+        graph.add_new_node_to_graph(pure_lecture_node)
         graph.add_new_node_to_graph(bulk_learning_exams_node)
         graph.add_new_node_to_graph(chatgpt_to_solve_tasks_node)
         graph.add_new_node_to_graph(late_assignments_node)

@@ -5,7 +5,7 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.Interviews.Trys import ExpectationsTrysNodeData, \
     WorkingInTeamsTrysNodeData, DeficitFrontendDevelopmentNodeData, DeficitHardwareNodeData, DeficitITSecurityNodeData, \
     InteractiveModulesNodeData, MakeModulesInteractiveNodeData, MakeModulesInteresstingNodeData, \
-    ModulesCloserToRealityNodeData
+    ModulesCloserToRealityNodeData, ElectiveSubjectNodeData, ModernAgileCurriculumNodeData, ProjectNodeData
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Trys import VisitMoreLecturesNodeData
 
@@ -37,6 +37,12 @@ class InterviewsTrysSubGraph:
 
         interactive_modules_node = NodeKnowledge(titel=InteractiveModulesNodeData.TITLE,
                                                  description=InteractiveModulesNodeData.CONTENT)
+        elective_subject_node = NodeKnowledge(titel=ElectiveSubjectNodeData.TITLE,
+                                              description=ElectiveSubjectNodeData.CONTENT)
+        modern_agile_node = NodeKnowledge(titel=ModernAgileCurriculumNodeData.TITLE,
+                                          description=ModernAgileCurriculumNodeData.CONTENT)
+        projects_node = NodeKnowledge(titel=ProjectNodeData.TITLE,
+                                      description=ProjectNodeData.CONTENT)
 
         make_modules_interactive_node = NodeKnowledge(titel=MakeModulesInteractiveNodeData.TITLE,
                                                       description=MakeModulesInteractiveNodeData.CONTENT)
@@ -53,6 +59,9 @@ class InterviewsTrysSubGraph:
         self.interviews_trys_node.connect(deficit_hardware_node)
         self.interviews_trys_node.connect(deficit_it_security_node)
         self.interviews_trys_node.connect(interactive_modules_node)
+        self.interviews_trys_node.connect(elective_subject_node)
+        self.interviews_trys_node.connect(modern_agile_node)
+        self.interviews_trys_node.connect(projects_node)
         self.interviews_trys_node.connect(make_modules_interactive_node)
         self.interviews_trys_node.connect(make_modules_interessting_node)
         self.interviews_trys_node.connect(modules_closer_to_reality_node)
@@ -66,6 +75,9 @@ class InterviewsTrysSubGraph:
         graph.add_new_node_to_graph(deficit_hardware_node)
         graph.add_new_node_to_graph(deficit_it_security_node)
         graph.add_new_node_to_graph(interactive_modules_node)
+        graph.add_new_node_to_graph(elective_subject_node)
+        graph.add_new_node_to_graph(modern_agile_node)
+        graph.add_new_node_to_graph(projects_node)
         graph.add_new_node_to_graph(make_modules_interactive_node)
         graph.add_new_node_to_graph(make_modules_interessting_node)
         graph.add_new_node_to_graph(modules_closer_to_reality_node)
