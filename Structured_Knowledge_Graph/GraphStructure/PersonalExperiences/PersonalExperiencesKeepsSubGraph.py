@@ -10,7 +10,8 @@ from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Keeps import Pr
     ClearModuleStructuresNodeData, LectureAndExercisesNodeData, FundamentalConceptsNodeData, CoreSubjectsNodeData, \
     AcademicResearchNodeData, CourseSpotAvailabilityNodeData, DigitalOrganisationNodeData, YearlyStructureNodeData, \
     PracticalRelevanceNodeData, CreativeCourseDesignNodeData, IntroductoryModulesNodeData, WorkWithCompaniesNodeData, \
-    WorkingWithProfsNodeData, ModuleStructureNodeData, ModernEquipmentNodeData, GuestLecturesNodeData
+    WorkingWithProfsNodeData, ModuleStructureNodeData, ModernEquipmentNodeData, GuestLecturesNodeData, \
+    ChatgptForSolutionsNodeData, OrganisedWorkNodeData
 
 
 class PersonalExperiencesKeepsSubGraph:
@@ -86,6 +87,12 @@ class PersonalExperiencesKeepsSubGraph:
         guest_lectures_node = NodeKnowledge(titel=GuestLecturesNodeData.TITLE,
                                             description=GuestLecturesNodeData.CONTENT)
 
+        chatgpt_for_solutions_node = NodeKnowledge(titel=ChatgptForSolutionsNodeData.TITLE,
+                                                   description=ChatgptForSolutionsNodeData.CONTENT)
+
+        organised_work_node = NodeKnowledge(titel=OrganisedWorkNodeData.TITLE,
+                                            description=OrganisedWorkNodeData.CONTENT)
+
         self.personal_experiences_keeps_node.connect(projectoriented_modules_node)
         self.personal_experiences_keeps_node.connect(teamwork_node)
         self.personal_experiences_keeps_node.connect(modern_software_development_concepts_node)
@@ -107,6 +114,8 @@ class PersonalExperiencesKeepsSubGraph:
         self.personal_experiences_keeps_node.connect(module_structure_node)
         self.personal_experiences_keeps_node.connect(modern_equipment_node)
         self.personal_experiences_keeps_node.connect(guest_lectures_node)
+        self.personal_experiences_keeps_node.connect(chatgpt_for_solutions_node)
+        self.personal_experiences_keeps_node.connect(organised_work_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_keeps_node)
         graph.add_new_node_to_graph(projectoriented_modules_node)
@@ -130,3 +139,5 @@ class PersonalExperiencesKeepsSubGraph:
         graph.add_new_node_to_graph(module_structure_node)
         graph.add_new_node_to_graph(modern_equipment_node)
         graph.add_new_node_to_graph(guest_lectures_node)
+        graph.add_new_node_to_graph(chatgpt_for_solutions_node)
+        graph.add_new_node_to_graph(organised_work_node)

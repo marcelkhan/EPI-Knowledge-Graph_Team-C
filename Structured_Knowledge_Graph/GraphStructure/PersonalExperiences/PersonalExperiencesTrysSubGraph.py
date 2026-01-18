@@ -5,7 +5,8 @@ from GraphModel.Nodes.NodeKnowledge import NodeKnowledge
 from Structured_Knowledge_Graph.GraphContent.KeepsDropsTrys import TrysNodeData
 from Structured_Knowledge_Graph.GraphContent.PersonalExperiences.Trys import PreparationForThesisNodeData, \
     InsecurityNodeData, ComputerScienceInASocialContextNodeData, SupportNodeData, LearningJourneyNodeData, \
-    CourseStructureNodeData, ScientificPapersNodeData, ExamPeriodNodeData, HybridLectureNodeData, MentoringEarlyNodeData
+    CourseStructureNodeData, ScientificPapersNodeData, ExamPeriodNodeData, HybridLectureNodeData, \
+    MentoringEarlyNodeData, VisitMoreLecturesNodeData
 
 
 class PersonalExperiencesTrysSubGraph:
@@ -48,6 +49,9 @@ class PersonalExperiencesTrysSubGraph:
         mentoring_early_node=NodeKnowledge(titel=MentoringEarlyNodeData.TITLE,
                                            description=MentoringEarlyNodeData.CONTENT)
 
+        visit_more_lectures_node = NodeKnowledge(titel=VisitMoreLecturesNodeData.TITLE,
+                                                       description=VisitMoreLecturesNodeData.CONTENT)
+
         self.personal_experiences_trys_node.connect(preparation_for_thesis_node)
         self.personal_experiences_trys_node.connect(insecurity_node)
         self.personal_experiences_trys_node.connect(computer_science_in_a_social_context_node)
@@ -58,6 +62,7 @@ class PersonalExperiencesTrysSubGraph:
         self.personal_experiences_trys_node.connect(exam_period_node)
         self.personal_experiences_trys_node.connect(hybrid_lecture_node)
         self.personal_experiences_trys_node.connect(mentoring_early_node)
+        self.personal_experiences_trys_node.connect(visit_more_lectures_node)
 
         graph.add_new_node_to_graph(self.personal_experiences_trys_node)
         graph.add_new_node_to_graph(preparation_for_thesis_node)
@@ -70,3 +75,4 @@ class PersonalExperiencesTrysSubGraph:
         graph.add_new_node_to_graph(exam_period_node)
         graph.add_new_node_to_graph(hybrid_lecture_node)
         graph.add_new_node_to_graph(mentoring_early_node)
+        graph.add_new_node_to_graph(visit_more_lectures_node)
