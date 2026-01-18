@@ -14,9 +14,7 @@ from Structured_Knowledge_Graph.GraphContent.Interviews.Evaluations import Expec
     WorkingInTeamsNodeData, SatisfactionWithStudyingNodeData, OrganisationNodeData, OrganisationResultsNodeData, \
     RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData, \
     LearningQualityNodeData, LearningQualityResultsNodeData, MissingKnowledgeNodeData, PreferredExamNodeData, \
-    PreferredExamResultsNodeData, SkillFocusNodeData, UnnecessaryClassesNodeData
-    RecommendedStudyingPathResultNodeData, SatisfactionWithStudyingResultsNodeData, WorkingInTeamsResultsNodeData, \
-    TopicsKnowMoreNodeData, ModulesNotPracticalNodeData, MostLikedModulesNodeData, OldIrrelevantModulesNodeData, \
+    PreferredExamResultsNodeData, SkillFocusNodeData, UnnecessaryClassesNodeData, TopicsKnowMoreNodeData, ModulesNotPracticalNodeData, MostLikedModulesNodeData, OldIrrelevantModulesNodeData, \
     TopicsMostValuableNodeData
 
 
